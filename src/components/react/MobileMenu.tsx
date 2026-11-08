@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, forwardRef, useImperativeHandle } from 'react';
 
 interface NavItem {
   href: string;
@@ -10,34 +10,62 @@ interface MobileMenuProps {
   currentPath: string;
 }
 
-export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
-  const [isOpen, setIsOpen] = useState(false);
+interface MobileMenuRef {
+  open: () => void;
+  close: () => void;
+}
 
-  useEffect(() => {
-    const handleKeydown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && isOpen) {
+const MobileMenu = forwardRef<MobileMenuRef, MobileMenuProps>(
+  ({ nav, currentPath }, ref) => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    useImperativeHandle(ref, () => ({
+      open: () => {
+        setIsOpen(true);
+        setIsAnimating(true);
+      },
+      close: () => {
+        setIsAnimating(false);
         setIsOpen(false);
+      },
+    }));
+
+    useEffect(() => {
+      const handleKeydown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape' && isOpen) {
+          setIsOpen(false);
+          setIsAnimating(false);
+        }
+      };
+
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+        document.addEventListener('keydown', handleKeydown);
+        setIsAnimating(true);
+      } else {
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleKeydown);
       }
+
+      return () => {
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleKeydown);
+      };
+    }, [isOpen]);
+
+    const isActive = (href: string) => {
+      return currentPath === href || (href !== '/' && currentPath.startsWith(href));
     };
 
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-      document.addEventListener('keydown', handleKeydown);
-    } else {
-      document.body.style.overflow = '';
-    }
+    if (!isOpen && !isAnimating) return null;
 
-    return () => {
-      document.body.style.overflow = '';
-      document.removeEventListener('keydown', handleKeydown);
+    const handleClose = () => {
+      setIsAnimating(false);
+      setIsOpen(false);
+      window.dispatchEvent(new CustomEvent('mobile-menu-close'));
     };
-  }, [isOpen]);
 
-  const isActive = (href: string) => {
-    return currentPath === href || (href !== '/' && currentPath.startsWith(href));
-  };
-
-  if (isOpen) {
     return (
       <nav
         id="mobile-menu"
@@ -48,11 +76,11 @@ export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
         aria-labelledby="mobile-menu-title"
       >
         <div
-          className="absolute inset-0 bg-black/50"
-          onClick={() => setIsOpen(false)}
+          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${isAnimating ? 'opacity-100' : 'opacity-0'}`}
+          onClick={handleClose}
           aria-hidden="true"
         />
-        <div className="absolute right-0 top-0 h-full w-[min(88vw,360px)] bg-white shadow-xl flex flex-col">
+        <div className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-xl transition-transform duration-300 ease-out ${isAnimating ? 'translate-y-0' : '-translate-y-full'}`}>
           <div className="flex items-center justify-between p-4 border-b border-stone-200">
             <h2 id="mobile-menu-title" className="font-body text-sm font-bold text-ink-900">
               Menu
@@ -61,19 +89,19 @@ export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
               type="button"
               aria-label="Close navigation menu"
               className="text-ink-500 hover:text-ink-900 text-xl leading-none p-1"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClose}
             >
               ×
             </button>
           </div>
-          <ul className="flex-1 overflow-y-auto p-4 space-y-1">
+          <ul className="p-4 space-y-1">
             {nav.map((item) => (
               <li key={item.href}>
                 <a
                   href={item.href}
                   aria-current={isActive(item.href) ? 'page' : undefined}
                   className="block min-h-12 rounded-xl px-3 py-3 text-sm font-semibold text-ink-900 hover:bg-sea-100"
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleClose}
                 >
                   {item.label}
                 </a>
@@ -83,7 +111,7 @@ export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
               <a
                 href="/contact/"
                 className="block min-h-12 rounded-xl px-3 py-3 text-sm font-semibold text-ink-900 hover:bg-sea-100"
-                onClick={() => setIsOpen(false)}
+                onClick={handleClose}
               >
                 Contact & early access
               </a>
@@ -93,7 +121,7 @@ export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
             <a
               href="/contact/"
               className="block w-full text-center min-h-12 rounded-full bg-ink-900 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-sea-700"
-              onClick={() => setIsOpen(false)}
+              onClick={handleClose}
             >
               Join waitlist
             </a>
@@ -102,18 +130,8 @@ export default function MobileMenu({ nav, currentPath }: MobileMenuProps) {
       </nav>
     );
   }
+);
 
-  return (
-    <button
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      className="lg:hidden flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-stone-300 px-4 text-sm font-bold text-ink-900 focus-visible:outline-offset-2"
-      onClick={() => setIsOpen(true)}
-    >
-      <span aria-hidden="true" className="text-sea-700">☰</span>
-      <span className="sr-only">Menu</span>
-    </button>
-  );
-}
+MobileMenu.displayName = 'MobileMenu';
+
+export default MobileMenu;
