@@ -21,32 +21,6 @@ const currentPath = Astro.url.pathname;
       <a href="/contact/" class="text-sm font-semibold text-ink-800 transition-colors hover:text-sea-700">Contact</a>
       <a href="/contact/" class="inline-flex min-h-11 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Join waitlist</a>
     </div>
-    <script is:inline>
-      const toggle = document.getElementById('mobile-menu-toggle');
-      const mobileMenu = document.querySelector('mobile-menu');
-      let isOpen = false;
-
-      function openMenu() {
-        isOpen = true;
-        if (mobileMenu && mobileMenu.open) {
-          mobileMenu.open();
-        }
-      }
-
-      function closeMenu() {
-        isOpen = false;
-        if (mobileMenu && mobileMenu.close) {
-          mobileMenu.close();
-        }
-      }
-
-      toggle?.addEventListener('click', () => {
-        if (isOpen) closeMenu(); else openMenu();
-      });
-
-      // Listen for close events from the menu
-      window.addEventListener('mobile-menu-close', closeMenu);
-    </script>
     <button
       id="mobile-menu-toggle"
       type="button"
@@ -58,6 +32,26 @@ const currentPath = Astro.url.pathname;
       <span aria-hidden="true" class="text-sea-700">☰</span>
       <span class="sr-only">Menu</span>
     </button>
+    <script is:inline>
+      const toggle = document.getElementById('mobile-menu-toggle');
+      let isOpen = false;
+
+      function openMenu() {
+        isOpen = true;
+        window.dispatchEvent(new CustomEvent('mobile-menu-open'));
+      }
+
+      function closeMenu() {
+        isOpen = false;
+        window.dispatchEvent(new CustomEvent('mobile-menu-close'));
+      }
+
+      toggle?.addEventListener('click', () => {
+        if (isOpen) closeMenu(); else openMenu();
+      });
+
+      window.addEventListener('mobile-menu-close', closeMenu);
+    </script>
   </div>
 
   <MobileMenu client:visible nav={nav} currentPath={currentPath} />
