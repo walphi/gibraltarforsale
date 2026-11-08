@@ -21,17 +21,6 @@ const currentPath = Astro.url.pathname;
       <a href="/contact/" class="text-sm font-semibold text-ink-800 transition-colors hover:text-sea-700">Contact</a>
       <a href="/contact/" class="inline-flex min-h-11 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Join waitlist</a>
     </div>
-    <button
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      class="lg:hidden flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-stone-300 px-4 text-sm font-bold text-ink-900 focus-visible:outline-offset-2"
-      id="mobile-menu-toggle"
-    >
-      <span aria-hidden="true" class="text-sea-700">☰</span>
-      <span class="sr-only">Menu</span>
-    </button>
   </div>
 
   <MobileMenu client:visible nav={nav} currentPath={currentPath} />
