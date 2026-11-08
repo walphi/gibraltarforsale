@@ -58,37 +58,50 @@ const currentPath = Astro.url.pathname;
   </nav>
 
   <script is:inline>
-    const toggle = document.querySelector('[data-mobile-menu-toggle]');
-    const panel = document.querySelector('[data-mobile-menu-panel]');
-    const overlay = document.querySelector('[data-mobile-menu-overlay]');
-    const closeBtn = document.querySelector('[data-mobile-menu-close]');
+    function initMobileMenu() {
+      const toggle = document.querySelector('[data-mobile-menu-toggle]');
+      const panel = document.querySelector('[data-mobile-menu-panel]');
+      const overlay = document.querySelector('[data-mobile-menu-overlay]');
+      const closeBtn = document.querySelector('[data-mobile-menu-close]');
 
-    function openMenu() {
-      panel.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      toggle.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      panel.classList.add('hidden');
-      document.body.style.overflow = '';
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-
-    toggle?.addEventListener('click', openMenu);
-    closeBtn?.addEventListener('click', closeMenu);
-    overlay?.addEventListener('click', closeMenu);
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
-        closeMenu();
+      if (!toggle || !panel || !overlay || !closeBtn) {
+        console.warn('Mobile menu elements not found');
+        return;
       }
-    });
 
-    // Close on link click
-    panel?.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+      function openMenu() {
+        panel.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+
+      function closeMenu() {
+        panel.classList.add('hidden');
+        document.body.style.overflow = '';
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
+      toggle.addEventListener('click', openMenu);
+      closeBtn.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      // Close on escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !panel.classList.contains('hidden')) {
+          closeMenu();
+        }
+      });
+
+      // Close on link click
+      panel.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initMobileMenu);
+    } else {
+      initMobileMenu();
+    }
   </script>
 </header>
