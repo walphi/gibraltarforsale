@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
 
 const siteUrl = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '') || 'https://gibraltarforsale.com';
 
@@ -11,5 +12,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [sitemap()],
+  integrations: [react(), sitemap()],
 });
