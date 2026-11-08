@@ -1,0 +1,14 @@
+---
+const indicators = [
+  { value: '08', label: 'locally researched area guides' },
+  { value: '08', label: 'practical buyer guides' },
+  { value: 'Not live', label: 'verified property listings' },
+  { value: 'Awaiting data', label: 'market prices and trends' },
+];
+---
+<div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-stone-200 bg-stone-200 md:grid-cols-4">
+  {indicators.map((item) => <div class="bg-white px-4 py-5 sm:px-6">
+    <p class="font-display text-2xl font-semibold text-ink-900">{item.value}</p>
+    <p class="mt-1 text-xs leading-5 text-stone-600">{item.label}</p>
+  </div>)}
+</div>

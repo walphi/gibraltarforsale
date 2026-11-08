@@ -1,0 +1,12 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+Astro.response.status = 404;
+---
+<SiteLayout title="Page Not Found | Gibraltar For Sale" description="The page could not be found. Browse the Gibraltar area and buyer guides instead." noindex>
+  <section class="mx-auto max-w-[900px] px-5 py-24 text-center sm:px-8 lg:px-12 lg:py-36">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-terra-600">404 · Page not found</p>
+    <h1 class="mt-4 font-display text-5xl font-semibold text-ink-900 sm:text-6xl">That page is not here.</h1>
+    <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-stone-600">The link may have changed or the page may not be part of this first release. No listing page is created from an unknown property identifier.</p>
+    <div class="mt-8 flex justify-center gap-3"><a class="inline-flex min-h-11 items-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white" href="/">Return home</a><a class="inline-flex min-h-11 items-center rounded-full border border-stone-300 px-5 text-sm font-bold text-ink-900" href="/areas/">Browse area guides</a></div>
+  </section>
+</SiteLayout>

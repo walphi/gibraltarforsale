@@ -1,0 +1,20 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+---
+<SiteLayout title="Gibraltar Rentals | Listing Status" description="No verified rental homes are published by Gibraltar For Sale yet. Find locally specific area and renting-versus-buying guidance.">
+  <Breadcrumb items={[{ label: 'Rent' }]} />
+  <section class="mx-auto max-w-[1040px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Rental listing status</p>
+    <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Renting in Gibraltar</h1>
+    <div class="mt-8 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+      <p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-terra-600">No verified rental listings are live</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">We are waiting for genuine, attributable inventory.</h2>
+      <p class="mt-4 max-w-3xl text-sm leading-7 text-stone-600">No rental feed or agent availability has been verified for this first release. We do not display sample addresses, made-up rents or fictional contact details. Any future rental entry should state its source and currency, confirm whether the asking rent is weekly or monthly, disclose furnished status and pet rules where known, and show when availability was last checked.</p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+      <a href="/guides/renting-vs-buying-in-gibraltar/" class="rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700"><span class="text-[10px] font-extrabold uppercase tracking-[.15em] text-sea-700">Buyer guide</span><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Renting vs buying in Gibraltar</h2><p class="mt-2 text-sm leading-6 text-stone-600">Compare questions to weigh up before choosing a route.</p></a>
+      <a href="/areas/" class="rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700"><span class="text-[10px] font-extrabold uppercase tracking-[.15em] text-sea-700">Local context</span><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Explore the eight areas</h2><p class="mt-2 text-sm leading-6 text-stone-600">Read distinct local guides before comparing homes.</p></a>
+    </div>
+  </section>
+</SiteLayout>

@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+import CtaBanner from '../components/astro/CtaBanner.astro';
+---
+<SiteLayout title="Gibraltar Homes for Sale | Listing Status" description="Gibraltar For Sale has no verified homes for sale published yet. Read what verification means and explore locally specific buyer guides and area information.">
+  <Breadcrumb items={[{ label: 'Property for sale' }]} />
+  <section class="mx-auto max-w-[1100px] px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Listing status</p>
+    <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Gibraltar homes for sale</h1>
+    <div class="mt-8 rounded-2xl border border-terra-600/30 bg-white p-6 sm:p-8">
+      <p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-terra-600">No verified listings are live</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">We are not showing sample homes as real property.</h2>
+      <p class="mt-4 max-w-3xl text-sm leading-7 text-stone-600">A property will appear here only after its source, status, location, price, image rights and responsible agent details can be checked. No listing feed or partner inventory has been supplied for this first release, so we are not displaying fictional examples or an artificial “0 results” search.</p>
+    </div>
+    <div class="mt-14 grid gap-8 md:grid-cols-2">
+      <article><p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-sea-700">When listings are added</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">What we intend to verify</h2><p class="mt-3 text-sm leading-7 text-stone-600">Listings should identify the responsible source and last-updated date, separate asking price from achieved-sale evidence, describe property facts in consistent units and distinguish the home itself from amenities or views that need confirmation. Availability should be reconfirmed before a viewing or offer.</p></article>
+      <article><p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-sea-700">Explore while we prepare</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">Use the area guides first</h2><p class="mt-3 text-sm leading-7 text-stone-600">The existing area and buyer guides help explain the questions to ask. They do not estimate a specific home’s value, promise availability or replace advice from a Gibraltar solicitor, lender, tax adviser or other qualified professional.</p><div class="mt-5 flex flex-wrap gap-3"><a href="/areas/" class="min-h-11 rounded-full bg-ink-900 px-5 py-3 text-xs font-bold text-white hover:bg-sea-700">Compare areas</a><a href="/guides/buying-property-in-gibraltar/" class="min-h-11 rounded-full border border-stone-300 px-5 py-3 text-xs font-bold text-ink-900 hover:border-sea-700">Read the buying guide</a></div></article>
+    </div>
+  </section>
+  <section class="mx-auto max-w-[1100px] px-5 pb-20 sm:px-8 lg:px-12"><CtaBanner light eyebrow="Market context" title="No price index until the evidence is ready." description="See the tracker’s current data status and the rules for any future measurements." href="/market/property-price-tracker/" label="Read the tracker status" /></section>
+</SiteLayout>

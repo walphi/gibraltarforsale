@@ -1,0 +1,16 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+---
+<SiteLayout title="Contact Gibraltar For Sale" description="Contact and enquiry status for Gibraltar For Sale. Verified operator contact details and property lead collection are not open in this first release.">
+  <Breadcrumb items={[{ label: 'Contact' }]} />
+  <section class="mx-auto max-w-[1000px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Contact status</p>
+    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Enquiries are not open yet</h1>
+    <div class="mt-8 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
+      <p class="text-sm leading-7 text-stone-600">This first release does not collect buyer, seller or partner contact details. No public enquiry or alert form is active. Verified operator contact information and an approved email route will be added before the service accepts messages.</p>
+      <p class="mt-4 text-sm leading-7 text-stone-600">Please do not send identity documents, financial details, immigration information or other personal information through this website. For property-specific questions, use the responsible agent shown on a genuine listing once verified inventory is published.</p>
+      <p class="mt-5 border-t border-stone-100 pt-4 text-xs leading-6 text-stone-600">For general reading, continue to the <a href="/guides/" class="font-bold text-sea-700 underline">buyer guides</a>, <a href="/areas/" class="font-bold text-sea-700 underline">area guides</a> or <a href="/market/" class="font-bold text-sea-700 underline">market-data pages</a>.</p>
+    </div>
+  </section>
+</SiteLayout>

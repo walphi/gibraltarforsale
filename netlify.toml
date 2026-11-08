@@ -1,0 +1,74 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  PNPM_VERSION = "11.25.0"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/property-for-sale"
+  to = "/property-for-sale/"
+  status = 301
+
+[[redirects]]
+  from = "/rent"
+  to = "/rent/"
+  status = 301
+
+[[redirects]]
+  from = "/areas"
+  to = "/areas/"
+  status = 301
+
+[[redirects]]
+  from = "/guides"
+  to = "/guides/"
+  status = 301
+
+[[redirects]]
+  from = "/market"
+  to = "/market/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy/"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/terms/"
+  status = 301
+
+[[redirects]]
+  from = "/cookies"
+  to = "/cookies/"
+  status = 301

@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumb from '../../components/astro/Breadcrumb.astro';
+import GuideCard from '../../components/astro/GuideCard.astro';
+const guides = (await getCollection('guides')).sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+<SiteLayout title="Buying Property in Gibraltar | Guides" description="Sourced, practical guidance on buying property, taxes, residency, mortgages, viewing, new builds and Gibraltar’s local areas.">
+  <Breadcrumb items={[{ label: 'Buyer guides' }]} />
+  <section class="mx-auto max-w-[1440px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Practical Gibraltar resources</p>
+    <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Buying property in Gibraltar: guides</h1>
+    <p class="mt-5 max-w-3xl text-base leading-7 text-stone-600">Start with the questions that shape your decision: what a purchase can cost, how property interacts with residence permission, what to ask at a viewing, and how Gibraltar’s areas differ. Each sourced guide links to its references and flags where individual advice is needed.</p>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      {guides.map((guide) => <GuideCard slug={guide.id} title={guide.data.title} description={guide.data.description} updated={guide.data.updated} />)}
+    </div>
+    <p class="mt-10 max-w-3xl text-xs leading-6 text-stone-600">Guides are general information, not legal, tax, immigration, mortgage, investment or financial advice. Rules and circumstances change. Check official sources and consult appropriately qualified local professionals before relying on a particular outcome.</p>
+  </section>
+</SiteLayout>

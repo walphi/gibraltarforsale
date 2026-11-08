@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+---
+<SiteLayout title="Website Terms | Gibraltar For Sale" description="Terms and limitations for the information-only first release of Gibraltar For Sale, which does not publish verified listings or accept enquiries.">
+  <Breadcrumb items={[{ label: 'Terms' }]} />
+  <article class="mx-auto max-w-[1000px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">First-release terms</p>
+    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Using this website</h1>
+    <p class="mt-4 text-xs text-stone-600">Status as at 8 November 2026 · The publisher must complete and review these terms before operating transactional services.</p>
+    <div class="article-content mt-8">
+      <p>This first release provides general property-area and buyer information. It does not publish verified property listings, take property enquiries, arrange viewings, provide agency, legal, tax, immigration, lending or investment services, or form a contractual offer.</p>
+      <h2 id="not-professional-advice">No professional advice</h2>
+      <p>Information is provided for general reading and is not a valuation or advice for a particular purchase. Rules, prices, availability, lending terms and personal circumstances can change. Check official sources and obtain advice from an appropriately qualified Gibraltar professional before taking action.</p>
+      <h2 id="sources">Sources and accuracy</h2>
+      <p>Articles identify source material where appropriate. A citation does not guarantee that a source remains current or applies to every situation. No market statistic, listing availability, agent relationship or developer claim should be inferred where the site explicitly says it is unavailable.</p>
+      <h2 id="external-links">External links</h2>
+      <p>Links to external sources are provided for reference. Their content and availability are controlled by the relevant operator.</p>
+      <h2 id="operator">Operator details</h2>
+      <p>The publisher has not supplied its legal entity and postal contact details. These provisional terms are not a complete commercial or property-listing agreement. No account, payment, enquiry or booking can be made through this first release.</p>
+    </div>
+  </article>
+</SiteLayout>

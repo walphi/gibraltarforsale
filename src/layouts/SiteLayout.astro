@@ -1,0 +1,91 @@
+---
+import Header from '../components/astro/Header.astro';
+import Footer from '../components/astro/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  keywords?: string[];
+  noindex?: boolean;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  updatedTime?: string;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+const {
+  title,
+  description,
+  image = '/manus-storage/gibraltar-hero-1600_17455c59.webp',
+  keywords = ['Gibraltar property for sale', 'Gibraltar homes', 'buying property in Gibraltar', 'Gibraltar area guides'],
+  noindex = false,
+  type = 'website',
+  publishedTime,
+  updatedTime,
+  schema,
+} = Astro.props;
+const candidateOrigin = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '');
+let publicOrigin: string | undefined;
+try {
+  if (candidateOrigin) {
+    const parsed = new URL(candidateOrigin);
+    if (parsed.protocol === 'https:' && !parsed.username && !parsed.password && parsed.pathname === '/' && !parsed.search && !parsed.hash) publicOrigin = parsed.origin;
+  }
+} catch {
+  publicOrigin = undefined;
+}
+const canonical = publicOrigin ? new URL(Astro.url.pathname, publicOrigin).href : undefined;
+const absoluteImage = publicOrigin ? new URL(image, publicOrigin).href : undefined;
+const fullTitle = title.includes('Gibraltar') ? title : `${title} | Gibraltar For Sale`;
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'Organization',
+    name: 'Gibraltar For Sale',
+    description: 'Independent Gibraltar property search and buyer guidance.',
+    ...(publicOrigin ? { '@id': `${publicOrigin}/#organization`, url: publicOrigin, logo: `${publicOrigin}/brand-mark.svg` } : {}),
+  },
+  {
+    '@type': 'WebSite',
+    name: 'Gibraltar For Sale',
+    inLanguage: 'en-GB',
+    ...(publicOrigin ? { '@id': `${publicOrigin}/#website`, url: publicOrigin, publisher: { '@id': `${publicOrigin}/#organization` } } : {}),
+  },
+];
+const pageSchema = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+const safeJsonLd = (value: unknown) => JSON.stringify(value).replace(/</g, '\\u003c');
+---
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#17283b" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.slice(0, 8).join(', ')} />
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'} />
+    <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+    <meta property="og:site_name" content="Gibraltar For Sale" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    {absoluteImage && <meta property="og:image" content={absoluteImage} />}
+    <meta name="twitter:card" content={absoluteImage ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    {absoluteImage && <meta name="twitter:image" content={absoluteImage} />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {updatedTime && <meta property="article:modified_time" content={updatedTime} />}
+    <link rel="icon" type="image/svg+xml" href="/brand-mark.svg" />
+    <title>{fullTitle}</title>
+    <script type="application/ld+json" set:html={safeJsonLd({ '@context': 'https://schema.org', '@graph': graph })}></script>
+    {pageSchema.map((node) => <script type="application/ld+json" set:html={safeJsonLd(node)}></script>)}
+  </head>
+  <body class="bg-stone-50 font-body text-ink-900 antialiased">
+    <a href="#main-content" class="sr-only z-[100] rounded bg-white p-3 text-ink-900 focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to main content</a>
+    <Header />
+    <main id="main-content"><slot /></main>
+    <Footer />
+  </body>
+</html>

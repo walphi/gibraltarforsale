@@ -1,0 +1,14 @@
+---
+interface Props { eyebrow?: string; title: string; description: string; href: string; label: string; light?: boolean }
+const { eyebrow, title, description, href, label, light = false } = Astro.props;
+---
+<section class={`rounded-[2rem] p-7 sm:p-10 lg:p-12 ${light ? 'border border-stone-200 bg-white' : 'bg-ink-900 text-white'}`}>
+  {eyebrow && <p class={`text-[10px] font-extrabold uppercase tracking-[.18em] ${light ? 'text-sea-700' : 'text-sea-100'}`}>{eyebrow}</p>}
+  <div class="mt-3 grid gap-7 md:grid-cols-[1fr_auto] md:items-end">
+    <div>
+      <h2 class={`max-w-3xl font-display text-4xl font-semibold leading-tight sm:text-5xl ${light ? 'text-ink-900' : 'text-white'}`}>{title}</h2>
+      <p class={`mt-4 max-w-2xl text-sm leading-7 ${light ? 'text-stone-600' : 'text-white/75'}`}>{description}</p>
+    </div>
+    <a href={href} class={`inline-flex min-h-12 items-center justify-center rounded-full px-6 text-sm font-bold transition-colors ${light ? 'bg-ink-900 text-white hover:bg-sea-700' : 'bg-white text-ink-900 hover:bg-sea-100'}`}>{label}</a>
+  </div>
+</section>

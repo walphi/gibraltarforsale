@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+---
+<SiteLayout title="Privacy Notice | Gibraltar For Sale" description="Privacy notice for the static first release of Gibraltar For Sale. No accounts, enquiry forms, saved searches or application analytics are active.">
+  <Breadcrumb items={[{ label: 'Privacy' }]} />
+  <article class="mx-auto max-w-[1000px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">First-release privacy notice</p>
+    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Privacy on this website</h1>
+    <p class="mt-4 text-xs text-stone-600">Status as at 8 November 2026 · Review before adding forms, analytics or accounts.</p>
+    <div class="article-content mt-8">
+      <p>This first release is a static information site. It does not offer account registration, save searches to a server, run property alerts, display an enquiry form or connect application-level analytics or advertising tags. The project-level optional analytics injection and platform badge scripts are disabled. The site code therefore does not intentionally collect a visitor’s name, email address, telephone number, property preferences or message through a first-party form.</p>
+      <h2 id="technical-requests">Technical requests</h2>
+      <p>The hosting and delivery systems may process technical request information to serve pages, protect the service and diagnose faults. Other platform or CDN analytics may remain, and this notice does not claim that all infrastructure tracking or logs have been stopped. The publisher has not supplied the legal operator identity, a direct privacy contact or detailed host-retention settings for this first release. Before personal-data features are enabled, this notice must be completed with the responsible controller, purposes, lawful bases, recipients, retention periods and rights-contact process.</p>
+      <h2 id="third-party-links">Links to other sites</h2>
+      <p>Guides link to government and other source pages. Following those links takes you to services operated by other organisations, which have their own privacy information and practices. This website does not control the destination’s data handling.</p>
+      <h2 id="your-choices">Your choices</h2>
+      <p>Do not enter personal or sensitive information on this site. No contact or lead form is active. If forms, alerts, accounts, analytics or advertising are introduced, the operator must publish a complete updated notice and provide any required consent choices before those features begin.</p>
+      <h2 id="contact">Privacy enquiries</h2>
+      <p>Verified controller contact details have not yet been supplied, so a privacy contact address is not published. The <a href="/contact/">contact-status page</a> explains why no submission form is open. This document is a limited first-release disclosure, not a substitute for a final legal privacy notice.</p>
+    </div>
+  </article>
+</SiteLayout>

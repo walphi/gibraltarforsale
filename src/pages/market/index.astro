@@ -1,0 +1,19 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Breadcrumb from '../../components/astro/Breadcrumb.astro';
+import CtaBanner from '../../components/astro/CtaBanner.astro';
+---
+<SiteLayout title="Gibraltar Property Market | Data & Method" description="Read a transparent Gibraltar property-market data status, a quarterly update policy and the methodology planned for any future price tracker.">
+  <Breadcrumb items={[{ label: 'Market' }]} />
+  <section class="mx-auto max-w-[1200px] px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Evidence before estimates</p>
+    <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Gibraltar property market</h1>
+    <p class="mt-5 max-w-3xl text-base leading-7 text-stone-600">A market number is only useful when its source, period and sample can be checked. No current private-market dataset has been supplied for this first release, so these pages explain the gap and the standards required before any price, yield or trend is published.</p>
+    <div class="mt-12 grid gap-4 md:grid-cols-3">
+      <a href="/market/property-price-tracker/" class="rounded-2xl border border-stone-200 bg-white p-6 hover:border-sea-700"><p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-terra-600">Data status</p><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Property price tracker</h2><p class="mt-2 text-sm leading-6 text-stone-600">Why no median, yield or price trend is currently published.</p></a>
+      <a href="/market/quarterly-market-update/" class="rounded-2xl border border-stone-200 bg-white p-6 hover:border-sea-700"><p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-sea-700">Update policy</p><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Quarterly market update</h2><p class="mt-2 text-sm leading-6 text-stone-600">What a future update needs to disclose about source, coverage and period.</p></a>
+      <a href="/market/methodology/" class="rounded-2xl border border-stone-200 bg-white p-6 hover:border-sea-700"><p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-sea-700">Measurement rules</p><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Proposed methodology</h2><p class="mt-2 text-sm leading-6 text-stone-600">Definitions and quality rules before charts or downloadable data.</p></a>
+    </div>
+    <div class="mt-12"><CtaBanner light eyebrow="Buying guidance" title="Market context is one input, not a valuation." description="Check the property's title, condition, terms and running costs with qualified professionals. Start with the practical purchase guide." href="/guides/buying-property-in-gibraltar/" label="Read the buying guide" /></div>
+  </section>
+</SiteLayout>

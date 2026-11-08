@@ -1,0 +1,37 @@
+---
+interface Crumb { label: string; href?: string }
+interface Props { items: Crumb[] }
+const { items } = Astro.props;
+const candidateOrigin = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '');
+let origin: string | undefined;
+try {
+  if (candidateOrigin) {
+    const parsed = new URL(candidateOrigin);
+    if (parsed.protocol === 'https:' && !parsed.username && !parsed.password && parsed.pathname === '/' && !parsed.search && !parsed.hash) origin = parsed.origin;
+  }
+} catch {
+  origin = undefined;
+}
+const trail = [{ label: 'Home', href: '/' }, ...items];
+const breadcrumbSchema = origin ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: trail.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.label,
+    item: new URL(item.href ?? Astro.url.pathname, origin).href,
+  })),
+} : undefined;
+const breadcrumbJson = breadcrumbSchema ? JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') : undefined;
+---
+<nav aria-label="Breadcrumb" class="mx-auto max-w-[1440px] px-5 pt-5 sm:px-8 lg:px-12">
+  <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-stone-600">
+    <li><a href="/" class="hover:text-sea-700">Home</a></li>
+    {items.map((item, index) => <li class="flex items-center gap-2">
+      <span aria-hidden="true" class="text-stone-300">/</span>
+      {item.href && index < items.length - 1 ? <a href={item.href} class="hover:text-sea-700">{item.label}</a> : <span aria-current="page" class="text-ink-900">{item.label}</span>}
+    </li>)}
+  </ol>
+</nav>
+{breadcrumbJson && <script type="application/ld+json" set:html={breadcrumbJson}></script>}

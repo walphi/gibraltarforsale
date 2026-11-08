@@ -1,0 +1,15 @@
+---
+interface Props { slug: string; name: string; descriptor: string; index?: number }
+const { slug, name, descriptor, index = 0 } = Astro.props;
+const number = String(index + 1).padStart(2, '0');
+---
+<a href={`/areas/${slug}/`} class="group relative flex min-h-52 flex-col justify-between overflow-hidden rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700 hover:bg-sea-100/40 focus-visible:outline-offset-4">
+  <span aria-hidden="true" class="absolute -right-10 -top-12 h-40 w-40 rounded-full border border-sea-700/15"></span>
+  <span aria-hidden="true" class="absolute -right-5 -top-7 h-28 w-28 rounded-full border border-sea-700/15"></span>
+  <span class="relative text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Area guide {number}</span>
+  <div class="relative mt-12">
+    <h2 class="font-display text-3xl font-semibold text-ink-900 group-hover:text-sea-700">{name}</h2>
+    <p class="mt-2 max-w-xs text-sm leading-6 text-stone-600">{descriptor}</p>
+  </div>
+  <span class="relative mt-5 inline-flex items-center gap-2 text-xs font-bold text-ink-900">Explore the area <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span></span>
+</a>
