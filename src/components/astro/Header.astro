@@ -34,25 +34,14 @@ const currentPath = Astro.url.pathname;
     </button>
     <script is:inline>
       const toggle = document.getElementById('mobile-menu-toggle');
-      let isOpen = false;
 
       function openMenu() {
-        isOpen = true;
         window.dispatchEvent(new CustomEvent('mobile-menu-open'));
       }
 
-      function closeMenu() {
-        isOpen = false;
-        window.dispatchEvent(new CustomEvent('mobile-menu-close'));
-      }
-
-      toggle?.addEventListener('click', () => {
-        if (isOpen) closeMenu(); else openMenu();
-      });
-
-      window.addEventListener('mobile-menu-close', closeMenu);
+      toggle?.addEventListener('click', openMenu);
     </script>
   </div>
 
-  <MobileMenu client:visible nav={nav} currentPath={currentPath} />
+  <MobileMenu client:load nav={nav} currentPath={currentPath} />
 </header>
