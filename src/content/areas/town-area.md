@@ -1,7 +1,8 @@
 ---
-title: "Town Area Property for Sale: A Buyer’s Guide"
-description: "A practical Gibraltar Town Area buying guide to urban living, transport, property checks and the trade-offs to weigh before viewing."
+title: "Town Area Property for Sale"
+description: "A practical Town Area Gibraltar guide to central apartments, amenities, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-city.webp"
 ---
 
 # Town Area Property for Sale

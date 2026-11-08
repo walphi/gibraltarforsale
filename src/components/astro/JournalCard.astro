@@ -1,0 +1,40 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  description: string;
+  category: 'market-insights' | 'area-spotlight' | 'buyer-advice' | 'legal-tax' | 'lifestyle';
+  updated: string;
+  featured?: boolean;
+  image?: string;
+}
+const { slug, title, description, category, updated, featured = false, image } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  'market-insights': 'Market Insights',
+  'area-spotlight': 'Area Spotlight',
+  'buyer-advice': 'Buyer Advice',
+  'legal-tax': 'Legal & Tax',
+  'lifestyle': 'Lifestyle',
+};
+
+const categoryColors: Record<string, string> = {
+  'market-insights': 'text-sea-700 bg-sea-100',
+  'area-spotlight': 'text-terra-600 bg-terra-100',
+  'buyer-advice': 'text-emerald-700 bg-emerald-100',
+  'legal-tax': 'text-amber-700 bg-amber-100',
+  'lifestyle': 'text-violet-700 bg-violet-100',
+};
+---
+<article class="group flex h-full flex-col rounded-2xl border border-stone-200 bg-white p-6 transition-transform hover:-translate-y-0.5 hover:border-sea-700/50">
+  <div class="flex items-center gap-2">
+    <span class={`text-[10px] font-extrabold uppercase tracking-[.17em] px-2 py-0.5 rounded-full ${categoryColors[category]}`}>{categoryLabels[category]}</span>
+    {featured && <span class="text-[10px] font-extrabold uppercase tracking-[.17em] text-amber-600 bg-amber-100 px-2 py-0.5 rounded-full">Featured</span>}
+  </div>
+  <h2 class="mt-5 font-display text-2xl font-semibold leading-tight text-ink-900 group-hover:text-sea-700"><a href={`/journal/${slug}/`}>{title}</a></h2>
+  <p class="mt-3 flex-1 text-sm leading-6 text-stone-600">{description}</p>
+  <div class="mt-6 flex items-center justify-between border-t border-stone-100 pt-4 text-xs text-stone-600">
+    <time datetime={updated}>{updated}</time>
+    <a href={`/journal/${slug}/`} class="font-bold text-ink-900 hover:text-sea-700">Read article <span aria-hidden="true">→</span></a>
+  </div>
+</article>

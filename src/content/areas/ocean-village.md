@@ -1,7 +1,8 @@
 ---
-title: Ocean Village Property for Sale
-description: Explore Ocean Village’s marina-side apartments, amenities, transport links and practical checks buyers should make before purchasing.
+title: "Ocean Village Property for Sale"
+description: "A practical Ocean Village Gibraltar guide to marina apartments, amenities, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-marina.webp"
 ---
 
 # Ocean Village Property for Sale

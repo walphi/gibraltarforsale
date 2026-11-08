@@ -1,7 +1,8 @@
 ---
-title: South District Property for Sale
-description: A practical South District Gibraltar guide to homes, access, services and the checks to make before buying or renting.
+title: "South District Property for Sale"
+description: "A practical South District Gibraltar guide to homes, access, services and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-rock.webp"
 ---
 
 # South District Property for Sale

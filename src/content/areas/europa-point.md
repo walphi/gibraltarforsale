@@ -1,7 +1,8 @@
 ---
-title: Europa Point Property for Sale
-description: A practical Europa Point property guide to homes, access, local landmarks and the checks buyers should make before choosing this southern Gibraltar setting.
+title: "Europa Point Property for Sale"
+description: "A practical Europa Point Gibraltar guide to new-build apartments, villas, amenities, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-view.webp"
 ---
 
 # Europa Point Property for Sale

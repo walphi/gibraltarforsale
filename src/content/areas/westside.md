@@ -1,7 +1,8 @@
 ---
-title: "Westside Property for Sale in Gibraltar"
-description: "A practical guide to Westside, Gibraltar: local context, transport, facilities and questions to ask before buying or renting."
+title: "Westside Property for Sale"
+description: "A practical Westside Gibraltar guide to modern apartments, new developments, amenities, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-apartments.webp"
 ---
 
 # Westside Property for Sale

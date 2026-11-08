@@ -1,7 +1,8 @@
 ---
 title: "Upper Town Property for Sale"
-description: "Explore Upper Town, Gibraltar: its historic setting, homes, walking access and the practical checks to make before buying."
+description: "A practical Upper Town Gibraltar guide to townhouses, character apartments, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-houses.webp"
 ---
 
 # Upper Town Property for Sale

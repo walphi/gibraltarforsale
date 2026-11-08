@@ -1,7 +1,8 @@
 ---
-title: "Eastside Property for Sale | Gibraltar Area Guide"
-description: "Explore Eastside Gibraltar property, coastal neighbourhoods, bus links and buyer checks, with a clear distinction between homes and proposed development."
+title: "Eastside Property for Sale"
+description: "A practical Eastside Gibraltar guide to coastal apartments, houses, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-coast.webp"
 ---
 
 # Eastside Property for Sale

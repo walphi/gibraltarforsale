@@ -1,7 +1,8 @@
 ---
 title: "Queensway Quay Property for Sale"
-description: "A practical guide to Queensway Quay homes, marina-side living, local access and the checks buyers should make before committing."
+description: "A practical Queensway Quay Gibraltar guide to marina apartments, amenities, transport and the checks to make before buying or renting."
 updated: "2026-11-08"
+image: "/images/unsplash/gibraltar-marina.webp"
 ---
 
 # Queensway Quay Property for Sale

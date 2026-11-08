@@ -50,4 +50,15 @@ const developments = defineCollection({
   }),
 });
 
-export const collections = { areas, guides, market, faqs, developments };
+const journal = defineCollection({
+  loader: glob({ base: './src/content/journal', pattern: '**/*.md' }),
+  schema: editorialSchema.extend({
+    category: z.enum(['market-insights', 'area-spotlight', 'buyer-advice', 'legal-tax', 'lifestyle']),
+    featured: z.boolean().default(false),
+    image: z.string().optional(),
+    author: z.string().default('Gibraltar For Sale Editorial Team'),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { areas, guides, market, faqs, developments, journal };
