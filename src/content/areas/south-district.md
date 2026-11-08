@@ -9,9 +9,9 @@ image: "/images/unsplash/gibraltar-rock.webp"
 
 ## A southern address with distinct pockets
 
-South District is a broad local label, not a guarantee that every address shares the same setting or routine. Gibraltar’s official geography describes the Rock as running north to south and ending at Europa Point; Government transport notices name Rosia, Camp Bay, Little Bay and Europa Point.[1] [2] The precise street, elevation, outlook and distance to a bus stop or service matter more than the district label alone.
+South District is a broad local label, not a guarantee that every address shares the same setting or routine. Gibraltar's official geography describes the Rock as running north to south and ending at Europa Point; Government transport notices name Rosia, Camp Bay, Little Bay and Europa Point.[1] [2] The precise street, elevation, outlook and distance to a bus stop or service matter more than the district label alone.
 
-For buyers and renters, ask which pocket fits your daily life. A home nearer Rosia may have different access and surroundings from one near Camp Bay or Europa Point. Treat terms such as “quiet,” “secluded” or “sea-view” in adverts as claims to verify at the property, not qualities of the whole district.
+For buyers and renters, ask which pocket fits your daily life. A home nearer Rosia may have different access and surroundings from one near Camp Bay or Europa Point. Treat terms such as "quiet," "secluded" or "sea-view" in adverts as claims to verify at the property, not qualities of the whole district.
 
 ## Housing: compare the actual home
 
@@ -21,27 +21,27 @@ Visit at different times. Check light, privacy, wind exposure, noise and whether
 
 ## Price and rental return
 
-No reliable, current South District-specific sale-price or rental-yield data was available from the authoritative sources checked. An asking price, advertised rent or online estimate alone cannot establish achieved values or dependable yield, so this guide quotes no market figures. Compare similar properties and distinguish asking prices from completed transactions. For rental calculations, verify achievable rent, vacancy assumptions and property-specific costs independently.
+Current South District-specific sale-price or rental-yield data from authoritative sources is limited. An asking price, advertised rent or online estimate alone cannot establish achieved values or dependable yield. Compare similar properties and distinguish asking prices from completed transactions. For rental calculations, verify achievable rent, vacancy assumptions and property-specific costs independently.
 
-This page does not report live listings or imply any particular home is available. Confirm status, price, exact address and viewing details directly with the agent or owner.
+Confirm status, price, exact address and viewing details directly with the agent or owner.
 
 ## Local character and services
 
-The Government’s 2026 summer beach shuttle linked Europa Point, Rosia Plaza, Camp Bay and Little Bay. It ran only from 6 July to 30 August 2026, so it is not evidence of a year-round service.[2] For regular journeys, check current bus routes and timetables for the precise address.
+The Government's 2026 summer beach shuttle linked Europa Point, Rosia Plaza, Camp Bay and Little Bay. It ran only from 6 July to 30 August 2026, so it is not evidence of a year-round service.[2] For regular journeys, check current bus routes and timetables for the precise address.
 
-The Gibraltar Health Authority lists St Bernard’s Hospital and the Primary Care Centre on Harbour Views Road, and a children’s health centre at Europort.[3] These are territory-wide service locations, not South District amenities. Check which service you need and how you would reach it. If schools matter, confirm current locations, admissions and transport directly rather than inferring suitability from an area label.
+The Gibraltar Health Authority lists St Bernard's Hospital and the Primary Care Centre on Harbour Views Road, and a children's health centre at Europort.[3] These are territory-wide service locations, not South District amenities. Check which service you need and how you would reach it. If schools matter, confirm current locations, admissions and transport directly rather than inferring suitability from an area label.
 
 ## Transport and access
 
-In its 2025 transport statement, the Government reported an additional Route 2 service to Europa Point and said smaller buses were an aim for some of the South District’s narrower, steeper streets.[4] This is useful context, not a guarantee of frequency, stops or vehicle type today. Check current operator information and walk the route from the property. Consider slopes, pavement width, crossings and steps as well as map distance, especially if mobility, a pushchair or shopping is relevant.
+In its 2025 transport statement, the Government reported an additional Route 2 service to Europa Point and said smaller buses were an aim for some of the South District's narrower, steeper streets.[4] This is useful context, not a guarantee of frequency, stops or vehicle type today. Check current operator information and walk the route from the property. Consider slopes, pavement width, crossings and steps as well as map distance, especially if mobility, a pushchair or shopping is relevant.
 
 Parking, turning space and the route out can vary by address. Roadworks can also change access: an October 2026 Government notice described temporary Rosia/South District road and bus-route changes.[5] That notice covered a specific period, not conditions today. Check current works and test your commute at the times you expect to travel.
 
 ## Advantages and trade-offs
 
-The southern setting puts coastal places such as Camp Bay and Little Bay among the district’s reference points, while Government transport information connects services with Europa Point and Rosia.[2] [4] This may suit someone who values those destinations. The trade-off is that “nearby” can mean a steep or winding walk, and a district-wide label does not establish reliable journeys or service access. Assess each trip from the actual doorway.
+The southern setting puts coastal places such as Camp Bay and Little Bay among the district's reference points, while Government transport information connects services with Europa Point and Rosia.[2] [4] This may suit someone who values those destinations. The trade-off is that "nearby" can mean a steep or winding walk, and a district-wide label does not establish reliable journeys or service access. Assess each trip from the actual doorway.
 
-Gibraltar’s e-Planning service lets the public search and view applications. The Government says development requires planning permission and, where relevant, building-regulations approval.[6] [7] Search nearby applications, then ask a qualified local adviser what records mean for the property. A search is not a substitute for reviewing title, building records or legal status.
+Gibraltar's e-Planning service lets the public search and view applications. The Government says development requires planning permission and, where relevant, building-regulations approval.[6] [7] Search nearby applications, then ask a qualified local adviser what records mean for the property. A search is not a substitute for reviewing title, building records or legal status.
 
 ## Nearby places to compare
 
@@ -51,7 +51,7 @@ Use Rosia, Camp Bay, Little Bay and Europa Point as distinct comparison points, 
 
 ### Is the South District quiet?
 
-It depends on the street, building and time. No verified district-wide noise figures were available for this guide. Visit more than once and listen inside and outside.
+It depends on the street, building and time. District-wide noise figures are not available. Visit more than once and listen inside and outside.
 
 ### Can I rely on a bus for commuting?
 
@@ -59,7 +59,7 @@ Check the current timetable and nearest stop. Routes change, and works may cause
 
 ### Are prices or rental yields higher here?
 
-This guide could not verify applicable neighbourhood-level sale or rent data. Compare current, like-for-like evidence and seek independent financial advice.
+Neighbourhood-level sale or rent data is not verified. Compare current, like-for-like evidence and seek independent financial advice.
 
 ### What should I check before an offer?
 

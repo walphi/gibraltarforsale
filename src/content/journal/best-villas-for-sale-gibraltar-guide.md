@@ -76,7 +76,7 @@ Unlike apartments, many Gibraltar villas sit on **Crown leasehold** land with te
 | Median days on market | 98 | 134 | 180+ |
 | Typical discount to asking | 6–9% | 8–12% | 10–15% |
 
-*Data sourced from public listings and agent conversations; no verified transaction dataset available.*
+*Data sourced from public listings and agent conversations; transaction data is not centrally published.*
 
 ## Buying Process Differences: Villa vs Apartment
 

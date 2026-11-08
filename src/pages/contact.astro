@@ -2,15 +2,56 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Breadcrumb from '../components/astro/Breadcrumb.astro';
 ---
-<SiteLayout title="Contact Gibraltar For Sale" description="Contact and enquiry status for Gibraltar For Sale. Verified operator contact details and property lead collection are not open in this first release.">
-  <Breadcrumb items={[{ label: 'Contact' }]} />
+<SiteLayout title="Contact & Early Access" description="Contact Gibraltar For Sale and join the waitlist for early access to verified property listings, market updates and exclusive buyer guides.">
+  <Breadcrumb items={[{ label: 'Contact & Early Access' }]} />
   <section class="mx-auto max-w-[1000px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
-    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Contact status</p>
-    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Enquiries are not open yet</h1>
-    <div class="mt-8 rounded-2xl border border-stone-200 bg-white p-6 sm:p-8">
-      <p class="text-sm leading-7 text-stone-600">This first release does not collect buyer, seller or partner contact details. No public enquiry or alert form is active. Verified operator contact information and an approved email route will be added before the service accepts messages.</p>
-      <p class="mt-4 text-sm leading-7 text-stone-600">Please do not send identity documents, financial details, immigration information or other personal information through this website. For property-specific questions, use the responsible agent shown on a genuine listing once verified inventory is published.</p>
-      <p class="mt-5 border-t border-stone-100 pt-4 text-xs leading-6 text-stone-600">For general reading, continue to the <a href="/guides/" class="font-bold text-sea-700 underline">buyer guides</a>, <a href="/areas/" class="font-bold text-sea-700 underline">area guides</a> or <a href="/market/" class="font-bold text-sea-700 underline">market-data pages</a>.</p>
+    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Contact & early access</p>
+    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Join the waitlist</h1>
+    <div class="mt-8 rounded-2xl border border-sea-700/30 bg-sea-50 p-6 sm:p-8">
+      <p class="text-sm leading-7 text-stone-600">Be the first to know when verified Gibraltar properties go live. We'll also send you market updates, new buyer guides and area insights — no spam, unsubscribe anytime.</p>
+      <form class="mt-6 max-w-md" action="/contact/" method="POST">
+        <div class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-ink-900 mb-1">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold text-ink-900 mb-1">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20" />
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="interest" class="block text-sm font-semibold text-ink-900 mb-1">Primary interest</label>
+              <select id="interest" name="interest" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20">
+                <option value="buy">Buying a property</option>
+                <option value="rent">Renting a property</option>
+                <option value="invest">Investment research</option>
+                <option value="relocate">Relocating to Gibraltar</option>
+              </select>
+            </div>
+            <div>
+              <label for="timeline" class="block text-sm font-semibold text-ink-900 mb-1">Timeline</label>
+              <select id="timeline" name="timeline" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20">
+                <option value="immediate">Ready now</option>
+                <option value="3months">Within 3 months</option>
+                <option value="6months">Within 6 months</option>
+                <option value="12months">Within a year</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-semibold text-ink-900 mb-1">What are you looking for? (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Areas, budget, property type, must-haves..." class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20 resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full inline-flex min-h-12 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Join the waitlist</button>
+          <p class="text-center text-xs text-stone-500">We'll never share your email. Unsubscribe anytime. <a href="/privacy/" class="font-bold text-sea-700 underline">Privacy notice</a>.</p>
+        </div>
+      </form>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+      <a href="/guides/buying-property-in-gibraltar/" class="rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700"><span class="text-[10px] font-extrabold uppercase tracking-[.15em] text-sea-700">Buyer guide</span><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Buying property in Gibraltar</h2><p class="mt-2 text-sm leading-6 text-stone-600">Start with the practical purchase guide.</p></a>
+      <a href="/areas/" class="rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700"><span class="text-[10px] font-extrabold uppercase tracking-[.15em] text-sea-700">Local context</span><h2 class="mt-3 font-display text-2xl font-semibold text-ink-900">Explore the eight areas</h2><p class="mt-2 text-sm leading-6 text-stone-600">Read distinct local guides before comparing homes.</p></a>
     </div>
   </section>
 </SiteLayout>

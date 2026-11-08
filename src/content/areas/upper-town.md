@@ -37,9 +37,9 @@ For comparison, view homes in the City Centre below and around the Upper Rock ap
 
 ## Price context and current listings
 
-This guide uses no verified current Upper Town sale-price series or rental-yield evidence. Asking prices and rents vary with property-specific factors, and asking prices are not completed-sale evidence. Compare current properties like for like and seek recent, relevant transaction evidence from a local professional. Do not assume a yield without checking achievable rent, vacancy, costs and applicable obligations.
+Current Upper Town sale-price series or rental-yield evidence is limited. Asking prices and rents vary with property-specific factors, and asking prices are not completed-sale evidence. Compare current properties like for like and seek recent, relevant transaction evidence from a local professional. Do not assume a yield without checking achievable rent, vacancy, costs and applicable obligations.
 
-No live listings, availability or asking prices have been verified for this page. Confirm that a property remains available and check its particulars, tenure, condition and inclusions with the listing agent.
+Confirm that a property remains available and check its particulars, tenure, condition and inclusions with the listing agent.
 
 ## Advantages and trade-offs
 

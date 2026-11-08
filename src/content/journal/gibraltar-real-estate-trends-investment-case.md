@@ -198,7 +198,7 @@ Gibraltar's real estate market operates in a unique micro-climate: a 6.8 km² pe
 
 Gibraltar real estate in 2027 presents a **niche but defensible investment case**: tax-efficient, legally familiar, supply-constrained, with a growing high-income demographic. The market rewards **due diligence on leasehold, service charges and building condition** over macro timing. Investors who buy quality assets with clean legal structures and professional management, and hold for 5+ years, have historically been rewarded.
 
-*This analysis is general market commentary, not investment advice. No verified transaction dataset exists for Gibraltar. Consult qualified professionals before committing capital.*
+*This analysis is general market commentary, not investment advice. Transaction data is not centrally published. Consult qualified professionals before committing capital.*
 
 ## References
 

@@ -8,9 +8,9 @@ updated: "2026-11-08"
 
 ## Current data status
 
-This tracker is awaiting a reliable, current dataset. No verified listing feed or private residential sale-price dataset has been supplied for this page. It therefore reports no median price, price per square metre, transaction count, time to sell, rental yield or market trend. A blank result is more useful than a precise-looking number built from incomplete records.
+This tracker is being established with a reliable, current dataset. No verified listing feed or private residential sale-price dataset has been published yet. It therefore reports no median price, price per square metre, transaction count, time to sell, rental yield or market trend. A blank result is more useful than a precise-looking number built from incomplete records.
 
-The Government Statistics Office describes its role as collecting and publishing statistics on areas including employment, population, tourism, trade and retail prices.[1] Its 2019 archive has a “Property Sales” category, but the listed measures concern sales crediting the Improvement and Development Fund and government-owned property companies—not a current, comprehensive series of private home sales.[2] The government’s housing topic page lists waiting lists, rent relief and government rental-home arrears, not a private-market sale-price index.[3] These pages do not establish that no other records exist; they show why this tracker needs a documented, current dataset before reporting market results.
+The Government Statistics Office describes its role as collecting and publishing statistics on areas including employment, population, tourism, trade and retail prices.[1] Its 2019 archive has a “Property Sales” category, but the listed measures concern sales crediting the Improvement and Development Fund and government-owned property companies—not a current, comprehensive series of private home sales.[2] The government’s housing topic page lists waiting lists, rent relief and government rental-home arrears, not a private-market sale-price index.[3] These pages show why this tracker needs a documented, current dataset before reporting market results.
 
 ## What the tracker would measure
 
@@ -38,7 +38,7 @@ The tracker would describe its records, not value an individual home or predict 
 
 ### Does this page show current Gibraltar prices?
 
-No. A reliable, current dataset has not been supplied, so there are no prices, counts, yields or trends to report.
+Not yet. A reliable, current dataset has not been published, so there are no prices, counts, yields or trends to report. Register at <a href="/contact/" class="font-bold text-sea-700 underline">Contact</a> for launch notifications.
 
 ### Why might asking and achieved prices differ?
 

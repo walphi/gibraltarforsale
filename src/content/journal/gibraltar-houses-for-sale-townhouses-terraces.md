@@ -183,7 +183,7 @@ Houses represent a minority of Gibraltar's housing stock — approximately 15% o
 | Europa Point | £1.3M–£1.8M | £1.8M–£2.8M | £2.8M–£3.5M |
 | Eastside | £1.5M–£2.2M | £2.2M–£3.2M | £3.2M–£4M+ |
 
-*All figures: asking prices from public listings; no verified transaction dataset available.*
+*All figures: asking prices from public listings; transaction data is not centrally published.*
 
 ---
 

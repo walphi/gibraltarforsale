@@ -17,7 +17,7 @@ This guide is about the area, not an endorsement of any property. A view, orient
 
 Europa Walks is a named residential estate in the area. A local report on its development plans described a mix of townhouses and villas. That is useful context for the area’s housing character, but it does not establish the current resale or rental stock, the condition of any home, or whether a property is on the market today. [2] Treat each home as a separate assessment: check its title and tenure, floor plan, outdoor space, parking arrangements, communal facilities, building management and any alteration history with the relevant professionals.
 
-No current, independently verified Europa Point sale-price series or comparable transaction evidence is cited here. Asking prices on individual listings are not the same as completed sale prices, and asking prices can change. Compare genuinely similar homes by size, condition, outlook, outdoor space, parking and building costs; confirm recent evidence with a Gibraltar property professional before forming a valuation. This guide does not state a market price or estimate rental yield because reliable, current area-level evidence was not established for publication.
+No independently verified Europa Point sale-price series or comparable transaction evidence is cited here. Asking prices on individual listings are not the same as completed sale prices, and asking prices can change. Compare genuinely similar homes by size, condition, outlook, outdoor space, parking and building costs; confirm recent evidence with a Gibraltar property professional before forming a valuation. This guide does not state a market price or estimate rental yield because reliable, current area-level evidence is still being established.
 
 ## Local character and amenities
 
@@ -51,7 +51,7 @@ This is an area guide, not a live listings feed. It makes no claim about current
 
 ### Is Europa Point a good location for a rental investment?
 
-Suitability depends on the specific home, lawful use, costs, occupancy and achievable rent. This guide does not publish a yield because no reliable, current comparable rent and cost data was established. Request evidence for the exact property and have the assumptions checked independently.
+Suitability depends on the specific home, lawful use, costs, occupancy and achievable rent. Rental yield data for this area is still being established. Request evidence for the exact property and have the assumptions checked independently.
 
 ### What should I verify before making an offer?
 
