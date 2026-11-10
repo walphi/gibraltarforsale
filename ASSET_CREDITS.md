@@ -8,7 +8,8 @@ Originals are retained under `assets/source/`; optimized WebP derivatives are in
 
 | Published derivative | Page context | Author / attribution | Source and licence |
 |---|---|---|---|
-| `gibraltar-bay-rock.webp` | Homepage hero; South District area context | Giorgiomonteforti — courtesy credit | [Wikimedia Commons source](https://commons.wikimedia.org/wiki/File:Bay_of_Gibraltar_from_The_Rock_4.JPG); author released own work into the public domain worldwide |
+| `gibraltar-rock-sunset.webp` | Homepage hero | Michaela Böhm (Římáková) (@michaelarimakova) | [Unsplash source](https://unsplash.com/photos/gibraltar-peninsula-with-the-rock-and-lighthouse-at-sunset-56x7f4QDzg8); [Unsplash License](https://unsplash.com/license) |
+| `gibraltar-bay-rock.webp` | South District area context | Giorgiomonteforti — courtesy credit | [Wikimedia Commons source](https://commons.wikimedia.org/wiki/File:Bay_of_Gibraltar_from_The_Rock_4.JPG); author released own work into the public domain worldwide |
 | `gibraltar-ocean-village-marina.webp` | Ocean Village area context | Cabeza2000 | [Wikimedia Commons source](https://commons.wikimedia.org/wiki/File:Gibraltar_sunset_in_the_Ocean_Village_Marina.jpg); [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
 | `gibraltar-ocean-village-boat.webp` | Queensway Quay nearby-marina context | Paul | [Wikimedia Commons source](https://commons.wikimedia.org/wiki/File:Boat,_Ocean_Village,_Gibraltar.jpg); [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) |
 | `gibraltar-city-bay.webp` | Upper Town broad-city context | Nathan Harig | [Wikimedia Commons source](https://commons.wikimedia.org/wiki/File:Gibraltar_city_and_bay_from_the_Rock_of_Gibraltar.jpg); [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) |
@@ -17,7 +18,7 @@ Originals are retained under `assets/source/`; optimized WebP derivatives are in
 | `gibraltar-city-by-beach.webp` | Westside broad-city context | Michal Mrozek (@miqul) | [Unsplash source](https://unsplash.com/photos/city-by-the-beach-at-daytime-zpt4AAra2Rw); [Unsplash License](https://unsplash.com/license) |
 | `gibraltar-cliff.webp` | Eastside coastline context | Michal Mrozek (@miqul) | [Unsplash source](https://unsplash.com/photos/cliff-beside-seashore-RjJiCLfMzLU); [Unsplash License](https://unsplash.com/license) |
 
-The two Unsplash photographs are individual editorial images, not a collection or image-republication service. Unsplash attribution is included as a courtesy. Do not reuse them as property-listing photos.
+The three Unsplash photographs are individual editorial images, not a collection or image-republication service. Unsplash attribution is included as a courtesy. Do not reuse them as property-listing photos. The prior Rock-forward hero image's original JPEG is retained at `assets/source/unsplash-gibraltar-rock-sunset.jpg`; responsive WebP derivatives are the only files served on the homepage.
 
 ## Original AI-generated editorial concepts
 

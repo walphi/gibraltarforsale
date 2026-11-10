@@ -11,24 +11,24 @@ import { getCollection } from 'astro:content';
 const guides = (await getCollection('guides')).sort((a, b) => a.id.localeCompare(b.id));
 const featuredGuides = ['buying-property-in-gibraltar', 'gibraltar-property-taxes-and-costs', 'gibraltar-residency-and-property', 'best-areas-to-buy-property-in-gibraltar']
   .map((slug) => guides.find((guide) => guide.id === slug)).filter((guide) => guide !== undefined);
-const hero = '/images/editorial/gibraltar-bay-rock.webp';
-const heroSrcSet = '/images/editorial/gibraltar-bay-rock-900.webp 900w, /images/editorial/gibraltar-bay-rock.webp 1800w';
+const hero = '/images/editorial/gibraltar-rock-sunset.webp';
+const heroSrcSet = '/images/editorial/gibraltar-rock-sunset-900.webp 900w, /images/editorial/gibraltar-rock-sunset.webp 1600w';
 ---
 <SiteLayout title="Gibraltar Property for Sale" description="Explore Gibraltar's neighbourhoods, practical buyer guidance and thoughtfully sourced local context. No verified properties or market feed are live yet." image={hero}>
   <section class="mx-auto grid max-w-[1280px] gap-9 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:gap-14 lg:px-12 lg:pb-24 lg:pt-16">
     <div class="max-w-2xl">
       <p class="text-xs font-extrabold uppercase tracking-[.2em] text-sea-700">An independent Gibraltar property guide</p>
-      <h1 class="mt-4 font-display text-6xl font-semibold leading-[.92] tracking-[-.035em] text-ink-900 sm:text-7xl lg:text-[4rem] xl:text-[4.5rem]">Gibraltar Property for Sale</h1>
-      <p class="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">Begin with a sense of place. Compare Gibraltar’s neighbourhoods, understand the buying process and approach each decision with clear, locally specific context.</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/areas/" class="inline-flex min-h-12 items-center justify-center rounded-full bg-sea-700 px-6 text-sm font-extrabold text-white transition-colors hover:bg-ink-900">Explore the eight areas</a>
-        <a href="/guides/buying-property-in-gibraltar/" class="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-300 bg-white px-6 text-sm font-bold text-ink-900 hover:border-sea-700 hover:text-sea-700">Read the buying guide</a>
+      <h1 class="mt-4 font-display text-4xl font-semibold leading-[.98] tracking-[-.035em] text-ink-900 sm:text-5xl lg:text-[4rem] xl:text-[4.5rem]">Gibraltar Property for Sale</h1>
+      <p class="mt-5 max-w-xl text-[15px] leading-7 text-stone-600 sm:text-base sm:leading-8">Start with the area, understand the buying process and compare your options with clear, locally specific guidance.</p>
+      <div class="mt-7 flex flex-wrap gap-2 sm:gap-3">
+        <a href="/areas/" class="inline-flex min-h-12 items-center justify-center rounded-full bg-sea-700 px-4 text-sm font-extrabold text-white transition-colors hover:bg-ink-900 sm:px-6">Explore the eight areas</a>
+        <a href="/guides/buying-property-in-gibraltar/" class="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-300 bg-white px-4 text-sm font-bold text-ink-900 hover:border-sea-700 hover:text-sea-700 sm:px-6">Read the buying guide</a>
       </div>
       <p class="mt-6 max-w-xl border-l-2 border-sea-700 pl-4 text-sm leading-6 text-stone-600">Listings are not live yet. We do not show sample homes, fabricated prices or unverified availability.</p>
     </div>
     <div class="relative">
       <div class="overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-200 shadow-[0_24px_60px_rgba(23,40,59,.13)]">
-        <img src={hero} srcset={heroSrcSet} sizes="(min-width: 1024px) 52vw, 100vw" alt="Gibraltar Bay, harbour and city seen from the Rock, with the coastline beyond" width="1800" height="1350" fetchpriority="high" decoding="async" class="aspect-[1.12] w-full object-cover lg:aspect-[4/3]" />
+        <img src={hero} srcset={heroSrcSet} sizes="(min-width: 1024px) 52vw, 100vw" alt="The Rock of Gibraltar, harbour and coastline at sunset" width="1600" height="1200" fetchpriority="high" decoding="async" class="aspect-[1.12] w-full object-cover lg:aspect-[4/3]" />
       </div>
       <span aria-hidden="true" class="absolute -bottom-8 -left-7 -z-10 hidden h-28 w-28 rounded-full border border-sea-700/30 lg:block"></span>
     </div>

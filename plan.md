@@ -124,4 +124,9 @@ The remote's current branch is `master`, not `main`. Before pushing, fetch and i
 
 ## 10 November 2026 image-presentation update
 
-Use the existing Gibraltar Bay panorama from the prior hero, retain its original 4:3 framing instead of the aggressive portrait-like desktop crop, and reduce desktop typography/spacing at large viewports while preserving mobile sizing. Do not display captions, photo credits, AI notes or image-specific titles adjacent to splash photography. Keep descriptive alt text for accessibility, and move required creator/source/license details plus AI-concept disclosure to the standalone `/image-credits/` page linked from the footer. Build and publish that page and synchronize the route manifest and generated sitemap.
+Use the original Rock-forward Gibraltar sunset photo from the previous homepage hero, retain its natural 4:3 framing instead of the aggressive portrait-like desktop crop, and reduce typography/spacing so both mobile and desktop feel compact. Do not display captions, photo credits, AI notes or image-specific titles adjacent to splash photography. Keep descriptive alt text for accessibility, and move required creator/source/license details plus AI-concept disclosure to the standalone `/image-credits/` page linked from the footer. Build and publish that page and synchronize the route manifest and generated sitemap.
+
+
+## 10 November 2026 homepage visibility correction
+
+The owner clarified that the earlier mobile screenshot is the desired compact reference: the headline should not wrap into an oversized multi-line block, and the Rock-forward Gibraltar sunset photo should be prominently visible directly below the introductory content without excessive scrolling. Reuse the previous homepage hero image (`hero-gibraltar.webp`), whose source page identifies photographer Michaela Böhm (Římáková) and whose use is covered by the Unsplash License; publish valid responsive WebP derivatives and retain the source/license link in the public Image Credits page. Use the full natural frame on desktop and reduce mobile headline/intro/CTA footprint enough to restore that composition.

@@ -85,7 +85,8 @@
 
 
 ## 12. Hero image, desktop scale and image-caption treatment — [x]
-- Use the existing Gibraltar Bay image from the previous hero design, with its full natural landscape framing rather than a tight desktop crop.
-- Reduce the desktop typography and visual scale so the site does not appear zoomed in at desktop sizes; preserve the current mobile layout and readability.
+- Use the original Rock-forward Gibraltar sunset photo from the previous homepage hero, with its full natural landscape framing rather than a tight desktop crop; preserve its Unsplash creator/source/license credit on the central Image Credits page.
+- Match the earlier supplied compact homepage reference on mobile: keep the headline readable without oversized wrapping and bring the Rock-forward sunset hero image into view immediately beneath the introductory content.
+- Reduce the typography and visual scale so the site does not appear zoomed in at desktop sizes, while preserving mobile readability.
 - Remove visible captions, credits, notes and image-specific titles around splash photographs and editorial artwork. Keep descriptive alt text for accessibility.
 - Preserve required creator, source, license and AI-concept disclosures on a central Image Credits page linked in the footer, not adjacent to the images. Add the route to the route manifest and generated sitemap.

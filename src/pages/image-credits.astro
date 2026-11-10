@@ -15,6 +15,16 @@ interface Credit {
 }
 
 const credits = new Map<string, Credit>();
+const heroImage = '/images/editorial/gibraltar-rock-sunset.webp';
+credits.set(heroImage, {
+  image: heroImage,
+  title: 'Homepage hero — Gibraltar peninsula with the Rock and lighthouse at sunset',
+  creator: 'Michaela Böhm (Římáková) (@michaelarimakova)',
+  sourceUrl: 'https://unsplash.com/photos/gibraltar-peninsula-with-the-rock-and-lighthouse-at-sunset-56x7f4QDzg8',
+  licenseLabel: 'Unsplash License',
+  licenseUrl: 'https://unsplash.com/license',
+  note: 'Resized and re-encoded for responsive display; the original framing is retained.',
+});
 for (const area of areas) {
   if (!credits.has(area.image)) {
     credits.set(area.image, {
