@@ -8,9 +8,8 @@ interface Props {
   featured?: boolean;
   image?: string;
   imageAlt?: string;
-  imageNote?: string;
 }
-const { slug, title, description, category, updated, featured = false, image, imageAlt, imageNote } = Astro.props;
+const { slug, title, description, category, updated, featured = false, image, imageAlt } = Astro.props;
 const categoryLabels: Record<string, string> = {
   'market-insights': 'Market Insights', 'area-spotlight': 'Area Spotlight', 'buyer-advice': 'Buyer Advice', 'legal-tax': 'Legal & Tax', 'lifestyle': 'Lifestyle',
 };
@@ -23,7 +22,6 @@ const srcSet = image ? `${image.replace(/\.webp$/, '-900.webp')} 900w, ${image} 
 <article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-stone-200 bg-white transition-transform hover:-translate-y-0.5 hover:border-sea-700/50">
   {image && <figure>
     <img src={image} srcset={srcSet} sizes="(max-width: 639px) 100vw, (max-width: 1279px) 50vw, 33vw" alt={cardAlt} loading="lazy" decoding="async" class="aspect-[16/10] w-full bg-stone-100 object-cover" />
-    {imageNote && <figcaption class="bg-stone-50 px-4 py-2 text-xs leading-5 text-stone-600">{imageNote}</figcaption>}
   </figure>}
   <div class="flex flex-1 flex-col p-5 sm:p-6">
     <div class="flex items-center gap-2">

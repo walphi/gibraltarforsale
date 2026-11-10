@@ -1,6 +1,6 @@
 ---
-interface Props { image: string; title: string; alt: string; note: string; width?: number; position?: string }
-const { image, title, alt, note, width = 1800, position = '50% 50%' } = Astro.props;
+interface Props { image: string; alt: string; width?: number; position?: string }
+const { image, alt, width = 1800, position = '50% 50%' } = Astro.props;
 const srcSet = `${image.replace(/\.webp$/, '-900.webp')} 900w, ${image} ${width}w`;
 ---
 <figure class="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
@@ -14,8 +14,4 @@ const srcSet = `${image.replace(/\.webp$/, '-900.webp')} 900w, ${image} ${width}
     style={`object-position: ${position}`}
     class="aspect-[4/3] w-full bg-stone-100 object-cover"
   />
-  <figcaption class="p-5 sm:p-6">
-    <h3 class="font-display text-2xl font-semibold leading-tight text-ink-900">{title}</h3>
-    <p class="mt-2 text-xs leading-5 text-stone-600">{note}</p>
-  </figcaption>
 </figure>

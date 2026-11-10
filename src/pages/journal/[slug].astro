@@ -47,11 +47,7 @@ const categoryColors: Record<string, string> = {
 
       {entry.data.image && (
         <figure class="mb-8 overflow-hidden rounded-2xl border border-stone-200 bg-white">
-          <img src={entry.data.image} srcset={srcSet} sizes="(max-width: 1023px) 100vw, 70vw" alt={entry.data.imageAlt || `${entry.data.title} — editorial image`} loading="eager" decoding="async" fetchpriority="high" class="aspect-[16/9] w-full bg-stone-100 object-cover" />
-          <figcaption class="space-y-1 border-t border-stone-100 bg-stone-50 px-5 py-4 text-xs leading-5 text-stone-600">
-            {entry.data.imageNote && <p>{entry.data.imageNote}</p>}
-            {entry.data.imageCredit && entry.data.imageCreditUrl && <p>Photo: <a href={entry.data.imageCreditUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{entry.data.imageCredit}</a>{entry.data.imageLicenseUrl && <> · <a href={entry.data.imageLicenseUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{entry.data.imageLicenseLabel}</a></>}</p>}
-          </figcaption>
+          <img src={entry.data.image} srcset={srcSet} sizes="(max-width: 1023px) 100vw, 70vw" alt={entry.data.imageAlt || `${entry.data.title} — editorial image`} loading="eager" decoding="async" fetchpriority="high" class="aspect-[4/3] w-full bg-stone-100 object-cover" />
         </figure>
       )}
 

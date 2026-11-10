@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Breadcrumb from '../components/astro/Breadcrumb.astro';
+import { areas } from '../data/areas';
+
+interface Credit {
+  image: string;
+  title: string;
+  creator: string;
+  sourceUrl?: string;
+  licenseLabel: string;
+  licenseUrl?: string;
+  note?: string;
+}
+
+const credits = new Map<string, Credit>();
+for (const area of areas) {
+  if (!credits.has(area.image)) {
+    credits.set(area.image, {
+      image: area.image,
+      title: area.name,
+      creator: area.imageCredit,
+      sourceUrl: area.imageCreditUrl,
+      licenseLabel: area.imageLicenseLabel,
+      licenseUrl: area.imageLicenseUrl,
+      note: area.imageNote,
+    });
+  }
+}
+
+const journal = await getCollection('journal');
+for (const entry of journal) {
+  const image = entry.data.image;
+  if (!image || credits.has(image)) continue;
+  credits.set(image, {
+    image,
+    title: entry.data.title,
+    creator: entry.data.imageCredit || 'Gibraltar For Sale',
+    sourceUrl: entry.data.imageCreditUrl,
+    licenseLabel: entry.data.imageLicenseLabel || 'AI-generated illustrative concept',
+    licenseUrl: entry.data.imageLicenseUrl,
+    note: entry.data.imageNote,
+  });
+}
+
+for (const name of ['bedroom', 'courtyard', 'living-room', 'planning', 'terrace']) {
+  const image = `/images/editorial/concept-${name}.webp`;
+  if (!credits.has(image)) {
+    credits.set(image, {
+      image,
+      title: 'Illustrative concept artwork',
+      creator: 'Gibraltar For Sale / Manus image generation',
+      licenseLabel: 'AI-generated concept; not a real property or listing',
+      note: 'Concept artwork only. It does not depict an available home or specific Gibraltar property.',
+    });
+  }
+}
+
+const entries = [...credits.values()].sort((a, b) => a.title.localeCompare(b.title));
+---
+<SiteLayout title="Image Credits | Gibraltar For Sale" description="Source, creator and reuse details for location photography and editorial concept artwork used across Gibraltar For Sale.">
+  <Breadcrumb items={[{ label: 'Image credits' }]} />
+  <section class="mx-auto max-w-[1080px] px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
+    <p class="text-xs font-extrabold uppercase tracking-[.18em] text-sea-700">Sources and licensing</p>
+    <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Image credits</h1>
+    <p class="mt-5 max-w-3xl text-base leading-7 text-stone-600">Image captions and credit labels are intentionally kept off the photography. Descriptive alt text remains available to assistive technology. This page gathers creator, source and license information in one place. WebP adaptations are resized and re-encoded only; Creative Commons ShareAlike images remain available under their original license.</p>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+      {entries.map((entry) => <article class="rounded-2xl border border-stone-200 bg-white p-5 sm:p-6">
+        <h2 class="font-display text-2xl font-semibold leading-tight text-ink-900">{entry.title}</h2>
+        <p class="mt-3 text-sm leading-6 text-stone-600">Creator: {entry.creator}</p>
+        <p class="mt-2 text-sm leading-6 text-stone-600">License: {entry.licenseUrl ? <a class="font-semibold text-sea-700 underline underline-offset-4" href={entry.licenseUrl} target="_blank" rel="noopener noreferrer">{entry.licenseLabel}</a> : entry.licenseLabel}</p>
+        {entry.sourceUrl && <p class="mt-2 text-sm leading-6"><a class="font-semibold text-sea-700 underline underline-offset-4" href={entry.sourceUrl} target="_blank" rel="noopener noreferrer">Open original source</a></p>}
+        {entry.note && <p class="mt-2 text-sm leading-6 text-stone-600">{entry.note}</p>}
+      </article>)}
+    </div>
+  </section>
+</SiteLayout>

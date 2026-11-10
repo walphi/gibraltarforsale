@@ -24,7 +24,7 @@ The static output is in `dist/`; the Netlify build publishes that directory. The
 
 Area articles are in `src/content/areas/`, buyer guides in `src/content/guides/`, market articles in `src/content/market/`, and journal articles in `src/content/journal/`. Their frontmatter is validated by `src/content.config.ts`. Preserve citations, qualifications and source links when editing factual content. Search for future-dated or unusually specific tax, lending, yield and market claims and source-check them before presenting them as current.
 
-Page templates are under `src/pages/`. Shared brand, header, footer and cards are under `src/components/astro/`; area imagery is mapped in `src/data/areas.ts`. Location-photo sources, license terms, modifications and AI image disclosures are recorded in `ASSET_CREDITS.md`. Original source photographs and generated masters are in `assets/source/` and `assets/generated/`; compressed WebP versions are in `public/images/editorial/`. All AI-created residential concepts are explicitly labelled as illustrative, not actual Gibraltar homes or listings.
+Page templates are under `src/pages/`. Shared brand, header, footer and cards are under `src/components/astro/`; area imagery is mapped in `src/data/areas.ts`. Location-photo sources, license terms, modifications and AI image disclosures are recorded in `ASSET_CREDITS.md` and the public `/image-credits/` page. Photo captions are intentionally omitted; descriptive alt text remains for accessibility. Original source photographs and generated masters are in `assets/source/` and `assets/generated/`; compressed WebP versions are in `public/images/editorial/`.
 
 ## Public launch status
 

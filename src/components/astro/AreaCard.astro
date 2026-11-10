@@ -1,13 +1,13 @@
 ---
 import type { AreaSummary } from '../../data/areas';
 interface Props extends AreaSummary { index?: number }
-const { slug, name, descriptor, index = 0, image, imageWidth, imagePosition, imageAlt, imageNote, imageCredit, imageCreditUrl, imageLicenseLabel, imageLicenseUrl } = Astro.props;
+const { slug, name, descriptor, index = 0, image, imageWidth, imagePosition, imageAlt } = Astro.props;
 const number = String(index + 1).padStart(2, '0');
 const srcSet = `${image.replace(/\.webp$/, '-900.webp')} 900w, ${image} ${imageWidth}w`;
 ---
 <article class="group overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm transition-[box-shadow,border-color,transform] hover:-translate-y-0.5 hover:border-sea-700/45 hover:shadow-md">
   <figure>
-    <img
+      <img
       src={image}
       srcset={srcSet}
       sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
@@ -16,11 +16,7 @@ const srcSet = `${image.replace(/\.webp$/, '-900.webp')} 900w, ${image} ${imageW
       decoding="async"
       style={`object-position: ${imagePosition}`}
       class="aspect-[4/3] w-full bg-stone-100 object-cover"
-    />
-    <figcaption class="space-y-1 border-b border-stone-100 bg-stone-50 px-4 py-3 text-xs leading-5 text-stone-600">
-      <p>{imageNote}</p>
-      <p>Photo: <a href={imageCreditUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{imageCredit}</a>{imageLicenseUrl && <> · <a href={imageLicenseUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{imageLicenseLabel}</a></>}{!imageLicenseUrl && <> · {imageLicenseLabel}</>}</p>
-    </figcaption>
+      />
   </figure>
   <div class="p-5 sm:p-6">
     <p class="text-xs font-extrabold uppercase tracking-[.16em] text-sea-700">Area guide {number}</p>

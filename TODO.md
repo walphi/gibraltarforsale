@@ -71,7 +71,7 @@
 
 ## 10. Premium visual refresh and original editorial feature — [x]
 - Replace the byte-identical placeholder images currently reused under the eight area-image and twelve journal-image filenames with at least 12 distinct, relevant visual assets. Reuse an image only for closely related subject matter; do not imply any editorial photograph is a live property listing.
-- Add at least three original, upmarket Mediterranean/luxury editorial images. They must not depict or be captioned as a specific real Gibraltar property, named development, or verified view. Label conceptual property scenes as illustrative inspiration, not available listings.
+- Add at least three original, upmarket Mediterranean/luxury editorial images. They must not depict or be presented as a specific real Gibraltar property, named development, or verified view. Disclose conceptual scenes as illustrative and not available listings on the central `/image-credits/` page, not in captions beside the images.
 - Select Gibraltar landmark/location photographs only from their actual source pages; preserve the creator, license, source URL and any modifications in `ASSET_CREDITS.md`. Use descriptive alt text and do not use watermarked, rights-unclear or low-resolution stock images.
 - Add one original, useful, premium-voiced journal feature about making a considered property choice in Gibraltar. Keep it practical and non-duplicative, cite or link any factual local/legal claims, avoid unsupported prices/yields/market forecasts, and state that illustrative imagery is not a listing.
 - Keep all new assets optimized, responsive and mobile-friendly; preserve the editorial ivory/navy/stone/Mediterranean-blue visual system and readable type.
@@ -82,3 +82,10 @@
 - README explains setup, environment variables, deployment, content editing and how to replace sample data. Include a launch checklist and recommended next-phase roadmap.
 - Launch checklist covers replacing sample data; functioning form persistence and email; image alt text; unique metadata; submitting sitemap to Search Console; robots policy; mobile nav/forms; alerts; cookie consent; accurate privacy/terms/cookie policy; accurate company/contact information; analytics events; mobile Core Web Vitals; structured data validation; and 301 redirects for removed/renamed URLs.
 - Do not copy competitor content, expose secrets, invent market data, or publish sample listings as real. Phase 1 is authorized for one public publication on the platform-generated URL; a custom domain, real listings, forms and email remain launch dependencies.
+
+
+## 12. Hero image, desktop scale and image-caption treatment — [x]
+- Use the existing Gibraltar Bay image from the previous hero design, with its full natural landscape framing rather than a tight desktop crop.
+- Reduce the desktop typography and visual scale so the site does not appear zoomed in at desktop sizes; preserve the current mobile layout and readability.
+- Remove visible captions, credits, notes and image-specific titles around splash photographs and editorial artwork. Keep descriptive alt text for accessibility.
+- Preserve required creator, source, license and AI-concept disclosures on a central Image Credits page linked in the footer, not adjacent to the images. Add the route to the route manifest and generated sitemap.

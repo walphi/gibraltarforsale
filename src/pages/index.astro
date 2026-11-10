@@ -18,7 +18,7 @@ const heroSrcSet = '/images/editorial/gibraltar-bay-rock-900.webp 900w, /images/
   <section class="mx-auto grid max-w-[1280px] gap-9 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:gap-14 lg:px-12 lg:pb-24 lg:pt-16">
     <div class="max-w-2xl">
       <p class="text-xs font-extrabold uppercase tracking-[.2em] text-sea-700">An independent Gibraltar property guide</p>
-      <h1 class="mt-4 font-display text-6xl font-semibold leading-[.92] tracking-[-.035em] text-ink-900 sm:text-7xl lg:text-[5.5rem]">Gibraltar Property for Sale</h1>
+      <h1 class="mt-4 font-display text-6xl font-semibold leading-[.92] tracking-[-.035em] text-ink-900 sm:text-7xl lg:text-[4rem] xl:text-[4.5rem]">Gibraltar Property for Sale</h1>
       <p class="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">Begin with a sense of place. Compare Gibraltar’s neighbourhoods, understand the buying process and approach each decision with clear, locally specific context.</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/areas/" class="inline-flex min-h-12 items-center justify-center rounded-full bg-sea-700 px-6 text-sm font-extrabold text-white transition-colors hover:bg-ink-900">Explore the eight areas</a>
@@ -26,16 +26,12 @@ const heroSrcSet = '/images/editorial/gibraltar-bay-rock-900.webp 900w, /images/
       </div>
       <p class="mt-6 max-w-xl border-l-2 border-sea-700 pl-4 text-sm leading-6 text-stone-600">Listings are not live yet. We do not show sample homes, fabricated prices or unverified availability.</p>
     </div>
-    <figure class="relative">
+    <div class="relative">
       <div class="overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-200 shadow-[0_24px_60px_rgba(23,40,59,.13)]">
-        <img src={hero} srcset={heroSrcSet} sizes="(min-width: 1024px) 52vw, 100vw" alt="Gibraltar Bay, harbour and city seen from the Rock, with the coastline beyond" width="1800" height="1350" fetchpriority="high" decoding="async" class="aspect-[1.12] w-full object-cover lg:aspect-[.92]" />
+        <img src={hero} srcset={heroSrcSet} sizes="(min-width: 1024px) 52vw, 100vw" alt="Gibraltar Bay, harbour and city seen from the Rock, with the coastline beyond" width="1800" height="1350" fetchpriority="high" decoding="async" class="aspect-[1.12] w-full object-cover lg:aspect-[4/3]" />
       </div>
-      <figcaption class="mt-3 flex flex-wrap justify-between gap-2 text-xs leading-5 text-stone-600">
-        <span>Gibraltar Bay, seen from the Rock</span>
-        <span>Photo: <a href="https://commons.wikimedia.org/wiki/File:Bay_of_Gibraltar_from_The_Rock_4.JPG" target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-2">Giorgiomonteforti · Public Domain</a></span>
-      </figcaption>
       <span aria-hidden="true" class="absolute -bottom-8 -left-7 -z-10 hidden h-28 w-28 rounded-full border border-sea-700/30 lg:block"></span>
-    </figure>
+    </div>
   </section>
 
   <section class="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12" aria-label="Current site coverage">
@@ -72,12 +68,12 @@ const heroSrcSet = '/images/editorial/gibraltar-bay-rock-900.webp 900w, /images/
     <div class="mb-9 max-w-3xl">
       <p class="text-xs font-extrabold uppercase tracking-[.19em] text-sea-700">A considered search</p>
       <h2 class="mt-3 font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Look beyond the viewing list.</h2>
-      <p class="mt-4 text-base leading-7 text-stone-600">A calmer search begins with the routines, light, outdoor space and questions that matter to you. These original concept images are visual inspiration only—not homes for sale.</p>
+      <p class="mt-4 text-base leading-7 text-stone-600">A calmer search begins with the routines and questions that matter to you.</p>
     </div>
     <div class="grid gap-5 md:grid-cols-3">
-      <EditorialImage image="/images/editorial/concept-terrace.webp" title="Make room for daily life" alt="Illustrative Mediterranean terrace concept with pale stone, greenery and soft evening light" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
-      <EditorialImage image="/images/editorial/concept-living-room.webp" title="Notice light and proportion" alt="Illustrative contemporary living room concept in warm limestone and natural linen tones" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
-      <EditorialImage image="/images/editorial/concept-courtyard.webp" title="Ask what feels like home" alt="Illustrative Mediterranean courtyard concept with limestone architecture and leafy planting" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
+      <EditorialImage image="/images/editorial/concept-terrace.webp" alt="Illustrative Mediterranean terrace concept with pale stone, greenery and soft evening light" width={1536} />
+      <EditorialImage image="/images/editorial/concept-living-room.webp" alt="Illustrative contemporary living room concept in warm limestone and natural linen tones" width={1536} />
+      <EditorialImage image="/images/editorial/concept-courtyard.webp" alt="Illustrative Mediterranean courtyard concept with limestone architecture and leafy planting" width={1536} />
     </div>
     <div class="mt-8 flex flex-col items-start justify-between gap-5 rounded-2xl border border-stone-200 bg-stone-100 p-6 sm:flex-row sm:items-center sm:p-8">
       <div><p class="text-xs font-bold uppercase tracking-[.15em] text-terra-600">Journal feature</p><h3 class="mt-2 font-display text-3xl font-semibold text-ink-900">A more considered way to search</h3><p class="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Turn broad inspiration into a practical brief before you compare homes.</p></div>

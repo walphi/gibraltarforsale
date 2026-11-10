@@ -12,7 +12,7 @@ const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const sections = headings.filter((heading) => heading.depth === 2);
 const areaImage = areas.find((area) => area.slug === entry.id);
-const srcSet = areaImage ? `${areaImage.image.replace(/\\.webp$/, '-900.webp')} 900w, ${areaImage.image} ${areaImage.imageWidth}w` : undefined;
+const srcSet = areaImage ? `${areaImage.image.replace(/\.webp$/, '-900.webp')} 900w, ${areaImage.image} ${areaImage.imageWidth}w` : undefined;
 const canonical = new URL(`/areas/${entry.id}/`, 'https://gibraltarforsale.netlify.app').href;
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article', headline: entry.data.title,
@@ -26,11 +26,7 @@ const articleSchema = {
     <article class="min-w-0">
       {areaImage && (
         <figure class="mb-8 overflow-hidden rounded-2xl border border-stone-200 bg-white">
-          <img src={areaImage.image} srcset={srcSet} sizes="(max-width: 1023px) 100vw, 70vw" alt={areaImage.imageAlt} width={areaImage.imageWidth} loading="eager" decoding="async" fetchpriority="high" style={`object-position: ${areaImage.imagePosition}`} class="aspect-[16/8] w-full bg-stone-100 object-cover" />
-          <figcaption class="space-y-1 border-t border-stone-100 bg-stone-50 px-5 py-4 text-xs leading-5 text-stone-600">
-            <p>{areaImage.imageNote}</p>
-            <p>Photo: <a href={areaImage.imageCreditUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{areaImage.imageCredit}</a>{areaImage.imageLicenseUrl && <> · <a href={areaImage.imageLicenseUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{areaImage.imageLicenseLabel}</a></>}</p>
-          </figcaption>
+          <img src={areaImage.image} srcset={srcSet} sizes="(max-width: 1023px) 100vw, 70vw" alt={areaImage.imageAlt} width={areaImage.imageWidth} loading="eager" decoding="async" fetchpriority="high" style={`object-position: ${areaImage.imagePosition}`} class="aspect-[4/3] w-full bg-stone-100 object-cover" />
         </figure>
       )}
       <div class="mb-8 border-b border-stone-200 pb-6">
