@@ -4,7 +4,10 @@ description: "Detailed breakdown of all costs when buying property in Gibraltar.
 updated: "2027-09-08"
 category: "legal-tax"
 featured: true
-image: "/images/unsplash/gibraltar-stamp-duty.webp"
+image: "/images/editorial/concept-planning.webp"
+imageAlt: "Illustrative home-search planning still life"
+imageNote: "AI-generated concept image; not a real tax document, calculation or property listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["stamp-duty", "buying-costs", "legal-fees", "mortgage-costs", "tax", "budget"]
 ---
 # Gibraltar Stamp Duty & Buying Costs: Complete 2027 Breakdown

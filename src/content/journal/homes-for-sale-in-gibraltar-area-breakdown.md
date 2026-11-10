@@ -4,7 +4,13 @@ description: "Detailed comparison of Gibraltar's eight residential areas for hom
 updated: "2027-04-08"
 category: "area-spotlight"
 featured: false
-image: "/images/unsplash/gibraltar-view.webp"
+image: "/images/editorial/gibraltar-city-by-beach.webp"
+imageAlt: "Gibraltar city and bay viewed from the Rock"
+imageNote: "Location photograph; broad city context, not a specific home or listing."
+imageCredit: "Michal Mrozek / Unsplash"
+imageCreditUrl: "https://unsplash.com/photos/city-by-the-beach-at-daytime-zpt4AAra2Rw"
+imageLicenseLabel: "Unsplash License"
+imageLicenseUrl: "https://unsplash.com/license"
 tags: ["areas", "neighbourhoods", "comparison", "south-district", "ocean-village", "town-area", "westside"]
 ---
 # Homes for Sale in Gibraltar: Area-by-Area Breakdown 2027

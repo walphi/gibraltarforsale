@@ -4,7 +4,10 @@ description: "Comprehensive guide to buying apartments in Gibraltar. Covers mari
 updated: "2027-06-08"
 category: "area-spotlight"
 featured: false
-image: "/images/unsplash/gibraltar-apartments.webp"
+image: "/images/editorial/concept-living-room.webp"
+imageAlt: "Illustrative Mediterranean living-room concept in warm limestone and natural linen tones"
+imageNote: "AI-generated concept image; not a real Gibraltar property or listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["apartments", "marina", "ocean-village", "queensway-quay", "service-charges", "rental-yield", "leasehold"]
 ---
 # Apartments for Sale in Gibraltar: Ocean Village, Queensway Quay & Beyond 2027

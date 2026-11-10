@@ -4,7 +4,13 @@ description: "Analysis of Gibraltar real estate market trends including price mo
 updated: "2027-07-08"
 category: "market-insights"
 featured: true
-image: "/images/unsplash/gibraltar-market-trends.webp"
+image: "/images/editorial/gibraltar-cliff.webp"
+imageAlt: "The Rock of Gibraltar and Mediterranean coastline"
+imageNote: "Location photograph; not an investment or property listing."
+imageCredit: "Michal Mrozek / Unsplash"
+imageCreditUrl: "https://unsplash.com/photos/cliff-beside-seashore-RjJiCLfMzLU"
+imageLicenseLabel: "Unsplash License"
+imageLicenseUrl: "https://unsplash.com/license"
 tags: ["market-trends", "prices", "yields", "investment", "analysis", "data"]
 ---
 # Gibraltar Real Estate Trends: Prices, Yields & Investment Case 2027

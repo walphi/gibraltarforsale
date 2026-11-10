@@ -4,7 +4,12 @@ description: "Analysis of Gibraltar property trends, price drivers and market ou
 updated: "2026-11-08"
 category: "market-insights"
 featured: true
-image: "/images/unsplash/gibraltar-market-trends.webp"
+image: "/images/editorial/gibraltar-bay-rock.webp"
+imageAlt: "Gibraltar Bay and harbour viewed from the Rock"
+imageNote: "Location photograph; not a property, market chart or listing."
+imageCredit: "Giorgiomonteforti"
+imageCreditUrl: "https://commons.wikimedia.org/wiki/File:Bay_of_Gibraltar_from_The_Rock_4.JPG"
+imageLicenseLabel: "Public Domain"
 tags: ["market-outlook", "property-prices", "investment", "2027"]
 ---
 # Gibraltar Property Market Outlook 2027: What Buyers Need to Know

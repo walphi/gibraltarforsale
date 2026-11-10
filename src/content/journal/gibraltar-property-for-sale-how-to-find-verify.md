@@ -4,7 +4,10 @@ description: "Practical guide to finding genuine Gibraltar property listings, ve
 updated: "2027-02-08"
 category: "buyer-advice"
 featured: false
-image: "/images/unsplash/gibraltar-city.webp"
+image: "/images/editorial/concept-planning.webp"
+imageAlt: "Illustrative home-search planning still life with a notebook and neutral interior tones"
+imageNote: "AI-generated concept image; not a real document, property or listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["property-search", "verification", "agents", "due-diligence", "listings"]
 ---
 # Gibraltar Property for Sale: How to Find & Verify Listings in 2027

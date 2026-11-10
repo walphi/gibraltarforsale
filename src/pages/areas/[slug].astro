@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Breadcrumb from '../../components/astro/Breadcrumb.astro';
-import CtaBanner from '../../components/astro/CtaBanner.astro';
+import { areas } from '../../data/areas';
 
 export async function getStaticPaths() {
   const entries = await getCollection('areas');
@@ -11,39 +11,50 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const sections = headings.filter((heading) => heading.depth === 2);
-const publicOrigin = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '');
-const canonical = publicOrigin ? new URL(`/areas/${entry.id}/`, publicOrigin).href : undefined;
+const areaImage = areas.find((area) => area.slug === entry.id);
+const srcSet = areaImage ? `${areaImage.image.replace(/\\.webp$/, '-900.webp')} 900w, ${areaImage.image} ${areaImage.imageWidth}w` : undefined;
+const canonical = new URL(`/areas/${entry.id}/`, 'https://gibraltarforsale.netlify.app').href;
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article', headline: entry.data.title,
   description: entry.data.description, dateModified: entry.data.updated,
-  ...(canonical ? { mainEntityOfPage: canonical } : {}),
+  mainEntityOfPage: canonical,
 };
-const heroImage = entry.data.image;
 ---
-<SiteLayout title={entry.data.title} description={entry.data.description} type="article" updatedTime={entry.data.updated} schema={articleSchema} image={heroImage}>
+<SiteLayout title={entry.data.title} description={entry.data.description} type="article" updatedTime={entry.data.updated} schema={articleSchema} image={areaImage?.image}>
   <Breadcrumb items={[{ label: 'Areas', href: '/areas/' }, { label: entry.data.title }]} />
   <div class="mx-auto grid max-w-[1280px] gap-10 px-5 pb-12 pt-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-16 lg:px-12 lg:pb-20">
     <article class="min-w-0">
-      {heroImage && (
-        <figure class="mb-8 rounded-2xl overflow-hidden border border-stone-200">
-          <img src={heroImage} alt="" class="w-full h-auto object-cover" />
+      {areaImage && (
+        <figure class="mb-8 overflow-hidden rounded-2xl border border-stone-200 bg-white">
+          <img src={areaImage.image} srcset={srcSet} sizes="(max-width: 1023px) 100vw, 70vw" alt={areaImage.imageAlt} width={areaImage.imageWidth} loading="eager" decoding="async" fetchpriority="high" style={`object-position: ${areaImage.imagePosition}`} class="aspect-[16/8] w-full bg-stone-100 object-cover" />
+          <figcaption class="space-y-1 border-t border-stone-100 bg-stone-50 px-5 py-4 text-xs leading-5 text-stone-600">
+            <p>{areaImage.imageNote}</p>
+            <p>Photo: <a href={areaImage.imageCreditUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{areaImage.imageCredit}</a>{areaImage.imageLicenseUrl && <> · <a href={areaImage.imageLicenseUrl} target="_blank" rel="noopener noreferrer" class="font-semibold text-ink-800 underline underline-offset-2">{areaImage.imageLicenseLabel}</a></>}</p>
+          </figcaption>
         </figure>
       )}
       <div class="mb-8 border-b border-stone-200 pb-6">
-        <p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-sea-700">Gibraltar area guide</p>
-        <p class="mt-3 text-xs text-stone-600">Updated <time datetime={entry.data.updated}>{entry.data.updated}</time></p>
-        <p class="mt-2 text-xs text-stone-600">Author/reviewer: no individual professional reviewer is claimed; references are linked in the article.</p>
-        <p class="mt-4 rounded-xl bg-sea-100/70 p-4 text-xs leading-6 text-ink-800">This article is general information, not a property valuation, legal, tax, residence or mortgage recommendation. Check current details with the relevant authority or a qualified local professional.</p>
+        <p class="text-xs font-extrabold uppercase tracking-[.17em] text-sea-700">Gibraltar area guide</p>
+        <p class="mt-3 text-sm text-stone-600">Updated <time datetime={entry.data.updated}>{entry.data.updated}</time></p>
+        <p class="mt-2 text-sm text-stone-600">Author/reviewer: no individual professional reviewer is claimed; references are linked in the article.</p>
+        <p class="mt-4 rounded-xl bg-sea-100/70 p-4 text-sm leading-6 text-ink-800">This article is general information, not a property valuation, legal, tax, residence or mortgage recommendation. Check current details with the relevant authority or a qualified local professional.</p>
       </div>
       <div class="article-content"><Content /></div>
-      <div class="mt-10 border-t border-stone-200 pt-8"><CtaBanner light eyebrow="Ready to search?" title="Register for early access to listings in this area." description="Join the waitlist and we'll notify you when verified properties in this area go live." href="/contact/" label="Join the waitlist" /></div>
+      <div class="mt-10 border-t border-stone-200 pt-8">
+        <a href="/guides/buying-property-in-gibraltar/" class="block rounded-2xl border border-stone-200 bg-white p-6 transition-colors hover:border-sea-700 sm:p-8">
+          <p class="text-xs font-bold uppercase tracking-[.15em] text-sea-700">Buyer guide</p>
+          <h2 class="mt-2 font-display text-3xl font-semibold text-ink-900">Make a location brief before you view</h2>
+          <p class="mt-2 text-sm leading-6 text-stone-600">Use the practical buying guide to shape questions for your own search.</p>
+          <span class="mt-4 inline-flex min-h-11 items-center font-bold text-ink-900">Read the guide →</span>
+        </a>
+      </div>
     </article>
     <aside class="lg:sticky lg:top-6 lg:self-start">
       <nav aria-label="On this page" class="rounded-2xl border border-stone-200 bg-white p-5">
-        <h2 class="font-body text-xs font-extrabold uppercase tracking-[.14em] text-ink-900">On this page</h2>
-        <ol class="mt-4 space-y-3 text-xs leading-5 text-stone-600">{sections.map((heading) => <li><a class="hover:text-sea-700" href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>
+        <h2 class="font-body text-sm font-extrabold uppercase tracking-[.14em] text-ink-900">On this page</h2>
+        <ol class="mt-4 space-y-3 text-sm leading-5 text-stone-600">{sections.map((heading) => <li><a class="hover:text-sea-700" href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>
       </nav>
-      <p class="mt-4 text-xs leading-5 text-stone-600">Guide links are informational. No agent, developer or partner has been vetted or endorsed.</p>
+      <p class="mt-4 text-sm leading-5 text-stone-600">Guide links are informational. No agent, developer or partner has been vetted or endorsed.</p>
     </aside>
   </div>
 </SiteLayout>

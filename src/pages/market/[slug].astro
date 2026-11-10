@@ -11,12 +11,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings } = await render(entry);
 const sections = headings.filter((heading) => heading.depth === 2);
-const publicOrigin = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '');
-const canonical = publicOrigin ? new URL(`/market/${entry.id}/`, publicOrigin).href : undefined;
+const canonical = new URL(`/market/${entry.id}/`, 'https://gibraltarforsale.netlify.app').href;
 const articleSchema = {
   '@context': 'https://schema.org', '@type': 'Article', headline: entry.data.title,
   description: entry.data.description, dateModified: entry.data.updated,
-  ...(canonical ? { mainEntityOfPage: canonical } : {}),
+  mainEntityOfPage: canonical,
 };
 ---
 <SiteLayout title={entry.data.title} description={entry.data.description} type="article" updatedTime={entry.data.updated} schema={articleSchema}>

@@ -1,6 +1,6 @@
-# Gibraltar For Sale — first release
+# Gibraltar For Sale — content-first release
 
-This project is the content-first first release of an independent Gibraltar property guide. It is built with Astro, TypeScript and Tailwind CSS v4 and generates static, crawlable pages. The currently published tranche contains area guides, buyer resources and clear market-data status. It intentionally does not publish the prototype properties, sample prices, fictional agents or fictional developments.
+This project is a static, content-led Gibraltar property guide built with Astro, TypeScript and Tailwind CSS v4. It publishes original area guides, buyer resources, market-data status pages and a journal. The public site intentionally does not show prototype properties, sample prices, fictional agents or fictional developments as real inventory.
 
 ## Local development
 
@@ -11,29 +11,31 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Astro serves the site on port 3000. The public pages are statically rendered at build time. Run the existing checks and build with:
+Astro serves on port 3000. Public pages are statically rendered at build time. Run checks and build with:
 
 ```sh
 pnpm check
 pnpm build
 ```
 
-The static output is written to `dist/`. There is no runtime database, contact endpoint, email provider or analytics dependency in this first release. The hosted static build installs from the committed lockfile and publishes `dist/`.
+The static output is in `dist/`; the Netlify build publishes that directory. The route declaration file is `public/manus-routes.json`. Update it whenever a public page is added, removed or renamed. Astro emits `sitemap-index.xml`; `robots.txt` points to that index, and Netlify redirects `/sitemap.xml` to it for compatibility.
 
-## Editing the content
+## Content and imagery
 
-Area articles are in `src/content/areas/`, buyer guides in `src/content/guides/`, and market articles in `src/content/market/`. Content uses Markdown and frontmatter validated by `src/content.config.ts`. Preserve reference links, qualifications and disclaimer copy when editing factual material. Add a matching route through the relevant content collection so the static URL and `public/manus-routes.json` remain aligned.
+Area articles are in `src/content/areas/`, buyer guides in `src/content/guides/`, market articles in `src/content/market/`, and journal articles in `src/content/journal/`. Their frontmatter is validated by `src/content.config.ts`. Preserve citations, qualifications and source links when editing factual content. Search for future-dated or unusually specific tax, lending, yield and market claims and source-check them before presenting them as current.
 
-The homepage and index pages are Astro files under `src/pages/`. Shared brand, header, footer, cards and calls to action are under `src/components/astro/`. The project-owned SVG favicon is `public/brand-mark.svg`; source photograph credits and reuse terms are in `ASSET_CREDITS.md`. The compressed hero images are stored at the project's `/manus-storage/` URLs.
+Page templates are under `src/pages/`. Shared brand, header, footer and cards are under `src/components/astro/`; area imagery is mapped in `src/data/areas.ts`. Location-photo sources, license terms, modifications and AI image disclosures are recorded in `ASSET_CREDITS.md`. Original source photographs and generated masters are in `assets/source/` and `assets/generated/`; compressed WebP versions are in `public/images/editorial/`. All AI-created residential concepts are explicitly labelled as illustrative, not actual Gibraltar homes or listings.
 
 ## Public launch status
 
-The first release has no first-party form, account, alert, saved-search or application-analytics collection. Project-level optional analytics injection and platform badge scripts are disabled. The hosting/CDN may still process technical request information or other platform analytics, and the Privacy and cookie notices state this limitation rather than claiming that all infrastructure logs have stopped. Verified operator contact details are still to be supplied, and no inactive enquiry or alert form is shown. Revise the notices before forms, account features, optional analytics, advertising or email.
+There is currently no first-party form, account, saved search, email-alert service or property enquiry endpoint. Contact, sale and rental pages therefore show a status message and do not ask visitors to submit personal data. Verified operator identity/contact details, property inventory, agent consent, a working lead processor and a retention/privacy plan remain prerequisites to activating those features.
 
-No verified property listings or market-data feed have been supplied. Public property and rental pages state this directly. The fictional content in `src/data/properties.ts`, `src/data/developments.ts` and related models is for a later integration phase and is not rendered by any public route. Do not change that without replacing each field with source-verified live material and removing all sample labels only after verification.
+No verified listings or market-data feed have been supplied. Property and rental pages state this directly; fictional records in `src/data/properties.ts` and `src/data/developments.ts` are not rendered as live inventory. Do not publish those data as real without replacing each field with source-verified material.
 
-The current project has no attached custom domain. Set `PUBLIC_SITE_URL` to the real, HTTPS public origin only after that domain is configured, then rebuild and republish so canonical and social URLs use the correct origin. Until then the static metadata omits absolute canonicals rather than guessing an origin. The platform-generated publish URL is the initial public URL.
+The custom `.com` domain did not resolve during the 9 November 2026 review. For now, canonical URLs, structured-data URLs, Astro sitemap generation and `robots.txt` use the deployed `https://gibraltarforsale.netlify.app` origin. Once `gibraltarforsale.com` is verified in DNS and attached in Netlify, update the origin consistently in `astro.config.mjs`, `SiteLayout.astro`, `Breadcrumb.astro`, journal/area canonical generation and `robots.txt`; rebuild, then inspect canonical links, the sitemap index and child sitemap URLs on the live custom domain. Do not switch the origin based on an environment variable until it points to a working canonical host.
 
-## Later marketplace phase
+The website source does not add GA4, Meta Pixel, advertising or session-replay scripts. The Netlify account's optional analytics setting cannot be determined from this repository; check it and update the Privacy/Cookie notices before making claims about host-level analytics. Hosting may process technical request data. The legal operator and a monitored privacy contact also need to be supplied before collecting personal data.
 
-Before enabling property search and enquiries, supply verified live listings and agent consent, accurate company/controller and contact details, a retention/privacy plan, working database and email settings, and any relevant professional review. Then implement the deferred property listing, lead persistence, alert scheduling, analytics and search functions described in `TODO.md`. No migration, email send, recurring alert, CRM write or public sample inventory is part of the first release.
+## Remaining launch work
+
+The high-priority quick fixes and owner prerequisites are summarized in [`docs/launch-review-plan.md`](docs/launch-review-plan.md). The existing `TODO.md` retains the full marketplace scope and launch criteria. Before enabling search and enquiries, source and verify authorized listings, provide accurate operator/contact details, choose and configure secure form/CRM/email services, establish retention and consent processes, and obtain appropriate local review for legal, tax, immigration and mortgage guidance. Review dated 2027 market and mortgage claims against dated primary evidence before promoting them as current.

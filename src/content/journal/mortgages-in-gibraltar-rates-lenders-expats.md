@@ -4,7 +4,10 @@ description: "Complete guide to Gibraltar mortgages. Covers lenders, rates, LTV 
 updated: "2027-10-08"
 category: "legal-tax"
 featured: false
-image: "/images/unsplash/gibraltar-mortgages.webp"
+image: "/images/editorial/concept-planning.webp"
+imageAlt: "Illustrative home-search planning still life"
+imageNote: "AI-generated concept image; not a real mortgage offer, calculation or property listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["mortgages", "rates", "lenders", "expats", "non-residents", "LTV", "eligibility", "cross-border"]
 ---
 # Mortgages in Gibraltar: Rates, Lenders & Eligibility for Expats 2027

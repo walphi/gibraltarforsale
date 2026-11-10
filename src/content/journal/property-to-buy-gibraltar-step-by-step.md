@@ -4,7 +4,10 @@ description: "Detailed walkthrough of the Gibraltar property purchase timeline f
 updated: "2027-03-08"
 category: "buyer-advice"
 featured: true
-image: "/images/unsplash/gibraltar-city.webp"
+image: "/images/editorial/concept-planning.webp"
+imageAlt: "Illustrative home-search planning still life"
+imageNote: "AI-generated concept image; not a real transaction document or property listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["purchase-process", "timeline", "solicitor", "exchange", "completion", "registration"]
 ---
 # Property to Buy in Gibraltar: Step-by-Step Purchase Process 2027

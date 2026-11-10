@@ -3,6 +3,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import AreaCard from '../components/astro/AreaCard.astro';
 import GuideCard from '../components/astro/GuideCard.astro';
 import TrustSignals from '../components/astro/TrustSignals.astro';
+import EditorialImage from '../components/astro/EditorialImage.astro';
 import CtaBanner from '../components/astro/CtaBanner.astro';
 import { areas } from '../data/areas';
 import { getCollection } from 'astro:content';
@@ -10,69 +11,81 @@ import { getCollection } from 'astro:content';
 const guides = (await getCollection('guides')).sort((a, b) => a.id.localeCompare(b.id));
 const featuredGuides = ['buying-property-in-gibraltar', 'gibraltar-property-taxes-and-costs', 'gibraltar-residency-and-property', 'best-areas-to-buy-property-in-gibraltar']
   .map((slug) => guides.find((guide) => guide.id === slug)).filter((guide) => guide !== undefined);
-const hero = '/images/hero-gibraltar.webp';
+const hero = '/images/editorial/gibraltar-bay-rock.webp';
+const heroSrcSet = '/images/editorial/gibraltar-bay-rock-900.webp 900w, /images/editorial/gibraltar-bay-rock.webp 1800w';
 ---
-<SiteLayout title="Gibraltar Property for Sale" description="Independent area guides and practical buyer resources for people considering a move to Gibraltar. Register for early access to verified listings." image={hero}>
+<SiteLayout title="Gibraltar Property for Sale" description="Explore Gibraltar's neighbourhoods, practical buyer guidance and thoughtfully sourced local context. No verified properties or market feed are live yet." image={hero}>
   <section class="mx-auto grid max-w-[1280px] gap-9 px-5 pb-16 pt-10 sm:px-8 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:gap-14 lg:px-12 lg:pb-24 lg:pt-16">
     <div class="max-w-2xl">
-      <p class="text-[10px] font-extrabold uppercase tracking-[.2em] text-sea-700">An independent Gibraltar property guide</p>
-      <h1 class="mt-4 font-display text-5xl font-semibold leading-[.98] text-ink-900 sm:text-6xl lg:text-7xl">Gibraltar Property for Sale</h1>
-      <p class="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">Start with the area, understand the buying process, and compare your options with clear, locally specific guidance. Verified listings coming soon — be the first to know.</p>
+      <p class="text-xs font-extrabold uppercase tracking-[.2em] text-sea-700">An independent Gibraltar property guide</p>
+      <h1 class="mt-4 font-display text-6xl font-semibold leading-[.92] tracking-[-.035em] text-ink-900 sm:text-7xl lg:text-[5.5rem]">Gibraltar Property for Sale</h1>
+      <p class="mt-6 max-w-xl text-base leading-7 text-stone-600 sm:text-lg sm:leading-8">Begin with a sense of place. Compare Gibraltar’s neighbourhoods, understand the buying process and approach each decision with clear, locally specific context.</p>
       <div class="mt-8 flex flex-wrap gap-3">
         <a href="/areas/" class="inline-flex min-h-12 items-center justify-center rounded-full bg-sea-700 px-6 text-sm font-extrabold text-white transition-colors hover:bg-ink-900">Explore the eight areas</a>
         <a href="/guides/buying-property-in-gibraltar/" class="inline-flex min-h-12 items-center justify-center rounded-full border border-stone-300 bg-white px-6 text-sm font-bold text-ink-900 hover:border-sea-700 hover:text-sea-700">Read the buying guide</a>
       </div>
-      <div class="mt-9 max-w-xl border-l-2 border-sea-700 pl-4">
-        <p class="text-sm font-semibold leading-6 text-ink-900">Register for early access to verified listings and market updates.</p>
-        <a href="/contact/" class="mt-2 inline-flex text-xs font-bold text-sea-700 underline underline-offset-4">Join the waitlist</a>
-      </div>
+      <p class="mt-6 max-w-xl border-l-2 border-sea-700 pl-4 text-sm leading-6 text-stone-600">Listings are not live yet. We do not show sample homes, fabricated prices or unverified availability.</p>
     </div>
     <figure class="relative">
       <div class="overflow-hidden rounded-[2rem] border border-stone-200 bg-stone-200 shadow-[0_24px_60px_rgba(23,40,59,.13)]">
-        <img src={hero} srcset="/images/hero-gibraltar-900.webp 900w, /images/hero-gibraltar.webp 1600w" sizes="(min-width: 1024px) 52vw, 100vw" alt="Gibraltar bay and city viewed from the Rock, with the harbour and coastline beyond" width="1600" height="1067" fetchpriority="high" class="aspect-[1.12] w-full object-cover lg:aspect-[.92]" />
+        <img src={hero} srcset={heroSrcSet} sizes="(min-width: 1024px) 52vw, 100vw" alt="Gibraltar Bay, harbour and city seen from the Rock, with the coastline beyond" width="1800" height="1350" fetchpriority="high" decoding="async" class="aspect-[1.12] w-full object-cover lg:aspect-[.92]" />
       </div>
-      <figcaption class="mt-3 flex flex-wrap justify-between gap-2 text-[10px] text-stone-600">
+      <figcaption class="mt-3 flex flex-wrap justify-between gap-2 text-xs leading-5 text-stone-600">
         <span>Gibraltar Bay, seen from the Rock</span>
+        <span>Photo: <a href="https://commons.wikimedia.org/wiki/File:Bay_of_Gibraltar_from_The_Rock_4.JPG" target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-2">Giorgiomonteforti · Public Domain</a></span>
       </figcaption>
       <span aria-hidden="true" class="absolute -bottom-8 -left-7 -z-10 hidden h-28 w-28 rounded-full border border-sea-700/30 lg:block"></span>
     </figure>
   </section>
 
-  <section class="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12" aria-label="What is currently available">
+  <section class="mx-auto max-w-[1280px] px-5 sm:px-8 lg:px-12" aria-label="Current site coverage">
     <TrustSignals />
   </section>
 
   <section class="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
     <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-      <div><p class="text-[10px] font-extrabold uppercase tracking-[.19em] text-sea-700">Start with place</p><h2 class="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Eight distinct corners of Gibraltar</h2></div>
+      <div><p class="text-xs font-extrabold uppercase tracking-[.19em] text-sea-700">Start with place</p><h2 class="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Eight distinct corners of Gibraltar</h2></div>
       <a href="/areas/" class="text-sm font-bold text-sea-700 underline decoration-sea-700/30 underline-offset-4 hover:decoration-sea-700">Explore all area guides</a>
     </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-      {areas.map((area, index) => <AreaCard slug={area.slug} name={area.name} descriptor={area.descriptor} index={index} />)}
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {areas.map((area, index) => <AreaCard {...area} index={index} />)}
     </div>
   </section>
 
   <section class="border-y border-stone-200 bg-white">
     <div class="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
       <div class="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-        <div><p class="text-[10px] font-extrabold uppercase tracking-[.19em] text-sea-700">Practical, sourced guidance</p><h2 class="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Make the next decision with more clarity</h2></div>
+        <div><p class="text-xs font-extrabold uppercase tracking-[.19em] text-sea-700">Practical, sourced guidance</p><h2 class="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Make the next decision with more clarity</h2></div>
         <a href="/guides/" class="text-sm font-bold text-sea-700 underline decoration-sea-700/30 underline-offset-4 hover:decoration-sea-700">All buyer guides</a>
       </div>
       <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {featuredGuides.map((guide) => <GuideCard slug={guide.id} title={guide.data.title} description={guide.data.description} updated={guide.data.updated} />)}
       </div>
       <div class="mt-12 grid gap-7 border-t border-stone-200 pt-10 lg:grid-cols-[.75fr_1.25fr]">
-        <div><p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-terra-600">Market data, responsibly</p><h3 class="mt-2 font-display text-3xl font-semibold text-ink-900">Track the market</h3></div>
-        <div><p class="max-w-3xl text-sm leading-7 text-stone-600">Our price tracker will publish only verified, sourced data. Register to be notified when the first quarterly update goes live.</p><a href="/market/property-price-tracker/" class="mt-4 inline-flex text-sm font-bold text-sea-700 underline underline-offset-4">See the tracker status</a></div>
+        <div><p class="text-xs font-extrabold uppercase tracking-[.17em] text-terra-600">Market data, responsibly</p><h3 class="mt-2 font-display text-3xl font-semibold text-ink-900">No numbers without a source</h3></div>
+        <div><p class="max-w-3xl text-sm leading-7 text-stone-600">The tracker explains which data would be needed before a Gibraltar estimate is useful. There is no verified private-market feed or current price series available here.</p><a href="/market/property-price-tracker/" class="mt-4 inline-flex text-sm font-bold text-sea-700 underline underline-offset-4">Read the tracker status</a></div>
       </div>
     </div>
   </section>
 
   <section class="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-    <CtaBanner eyebrow="The first useful step" title="Start with the questions that matter." description="Compare Gibraltar's areas, understand the buying process and check current official sources before making a property decision." href="/guides/buying-property-in-gibraltar/" label="Read the buying guide" />
+    <div class="mb-9 max-w-3xl">
+      <p class="text-xs font-extrabold uppercase tracking-[.19em] text-sea-700">A considered search</p>
+      <h2 class="mt-3 font-display text-4xl font-semibold leading-tight text-ink-900 sm:text-5xl">Look beyond the viewing list.</h2>
+      <p class="mt-4 text-base leading-7 text-stone-600">A calmer search begins with the routines, light, outdoor space and questions that matter to you. These original concept images are visual inspiration only—not homes for sale.</p>
+    </div>
+    <div class="grid gap-5 md:grid-cols-3">
+      <EditorialImage image="/images/editorial/concept-terrace.webp" title="Make room for daily life" alt="Illustrative Mediterranean terrace concept with pale stone, greenery and soft evening light" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
+      <EditorialImage image="/images/editorial/concept-living-room.webp" title="Notice light and proportion" alt="Illustrative contemporary living room concept in warm limestone and natural linen tones" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
+      <EditorialImage image="/images/editorial/concept-courtyard.webp" title="Ask what feels like home" alt="Illustrative Mediterranean courtyard concept with limestone architecture and leafy planting" note="AI-generated concept image; not a real Gibraltar property or listing." width={1536} />
+    </div>
+    <div class="mt-8 flex flex-col items-start justify-between gap-5 rounded-2xl border border-stone-200 bg-stone-100 p-6 sm:flex-row sm:items-center sm:p-8">
+      <div><p class="text-xs font-bold uppercase tracking-[.15em] text-terra-600">Journal feature</p><h3 class="mt-2 font-display text-3xl font-semibold text-ink-900">A more considered way to search</h3><p class="mt-2 max-w-2xl text-sm leading-6 text-stone-600">Turn broad inspiration into a practical brief before you compare homes.</p></div>
+      <a href="/journal/a-more-considered-property-search-in-gibraltar/" class="inline-flex min-h-11 shrink-0 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white hover:bg-sea-700">Read the feature</a>
+    </div>
   </section>
 
-  <section class="mx-auto max-w-[1280px] px-5 py-20 sm:px-8 lg:px-12 lg:py-28">
-    <CtaBanner eyebrow="Early access" title="Be the first to see verified listings." description="Join our waitlist for priority notification when new properties go live, plus market updates and exclusive buyer guides." href="/contact/" label="Join the waitlist" />
+  <section class="mx-auto max-w-[1280px] px-5 pb-20 sm:px-8 lg:px-12 lg:pb-28">
+    <CtaBanner eyebrow="The first useful step" title="Start with the questions that matter." description="Compare Gibraltar’s areas, understand the buying process and check current official sources before making a property decision." href="/guides/buying-property-in-gibraltar/" label="Read the buying guide" />
   </section>
 </SiteLayout>

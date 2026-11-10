@@ -2,33 +2,22 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Breadcrumb from '../components/astro/Breadcrumb.astro';
 ---
-<SiteLayout title="Cookie Notice | Gibraltar For Sale" description="Cookie and technology notice for Gibraltar For Sale. We use minimal, privacy-friendly analytics.">
+<SiteLayout title="Cookie and Technology Notice | Gibraltar For Sale" description="Cookie and similar technology notice for the current Gibraltar For Sale information website.">
   <Breadcrumb items={[{ label: 'Cookies' }]} />
   <article class="mx-auto max-w-[1000px] px-5 pb-20 pt-10 sm:px-8 lg:px-12 lg:pb-28 lg:pt-16">
-    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Cookie notice</p>
+    <p class="text-xs font-extrabold uppercase tracking-[.18em] text-sea-700">Cookie and technology notice</p>
     <h1 class="mt-3 font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Cookies and similar technologies</h1>
-    <p class="mt-4 text-xs text-stone-600">Last updated 8 November 2026</p>
+    <p class="mt-4 text-sm text-stone-600">Last reviewed 10 November 2026</p>
     <div class="article-content mt-8">
-      <p>This site uses minimal cookies and similar technologies. We do not use advertising trackers, Meta pixels, Google Analytics, or third-party marketing cookies.</p>
-      <h2 id="what-we-use">What we use</h2>
-      <ul class="mt-2 list-disc pl-6 space-y-1">
-        <li><strong>Essential cookies:</strong> Session management for waitlist form submission (if used).</li>
-        <li><strong>Privacy-friendly analytics:</strong> Netlify Analytics — no cookies, no personal data, GDPR-compliant by design. Tracks anonymous page views, referrers, device type and country.</li>
-      </ul>
-      <h2 id="what-we-dont-use">What we don't use</h2>
-      <ul class="mt-2 list-disc pl-6 space-y-1">
-        <li>Google Analytics / GA4</li>
-        <li>Meta / Facebook pixels</li>
-        <li>Advertising / retargeting cookies</li>
-        <li>Session replay / heatmap tools (Hotjar, Clarity, etc.)</li>
-        <li>Third-party social media trackers</li>
-      </ul>
-      <h2 id="hosting">Hosting platform</h2>
-      <p>Netlify (our host) processes standard request logs for security and performance. These logs contain IP addresses and user agents but are not accessible to us and are governed by Netlify's privacy policy.</p>
-      <h2 id="your-choices">Your choices</h2>
-      <p>Since we use no non-essential cookies, there is no consent banner. Analytics is anonymous and cannot be linked to you. To opt out of Netlify Analytics, use a browser extension that blocks analytics scripts.</p>
+      <p>The current site has no first-party login, contact form, waitlist or saved-search feature, so it does not need those features' application cookies. Its source does not intentionally add Google Analytics, advertising pixels or session-replay tools.</p>
+      <h2 id="hosting">Hosting and analytics settings</h2>
+      <p>The site is served by Netlify. Hosting may use technical identifiers or process request data for service delivery and security. Whether optional Netlify Analytics is enabled is controlled in the hosting account and cannot be established from the public source repository. The site operator must verify the dashboard setting and update this notice before claiming either that analytics is active or that no analytics is used.</p>
+      <h2 id="external">External links</h2>
+      <p>Links to other websites—including official sources, Wikimedia Commons and Unsplash—take you outside this site. Those providers set and describe their own technologies.</p>
+      <h2 id="choices">Your choices</h2>
+      <p>You can manage or clear cookies through your browser. This notice does not imply that a browser choice controls server-side security logs. If optional analytics, advertising or other non-essential storage is enabled later, the operator should review applicable consent requirements and provide suitable controls before activation.</p>
       <h2 id="contact">Questions</h2>
-      <p>See the <a href="/contact/" class="font-bold text-sea-700 underline">Contact page</a> or <a href="/privacy/" class="font-bold text-sea-700 underline">Privacy notice</a>.</p>
+      <p>Verified operator contact details are not yet published. See the <a href="/privacy/" class="font-bold text-sea-700 underline">Privacy notice</a> for the current status.</p>
     </div>
   </article>
 </SiteLayout>

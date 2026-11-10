@@ -4,7 +4,10 @@ description: "Complete guide to buying houses in Gibraltar. Covers townhouses in
 updated: "2027-05-08"
 category: "area-spotlight"
 featured: false
-image: "/images/unsplash/gibraltar-houses.webp"
+image: "/images/editorial/concept-courtyard.webp"
+imageAlt: "Illustrative Mediterranean courtyard concept with limestone architecture and leafy planting"
+imageNote: "AI-generated concept image; not a real Gibraltar property or listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["houses", "townhouses", "terraces", "detached", "renovation", "leasehold"]
 ---
 # Gibraltar Houses for Sale: Townhouses, Terraces & Detached Homes 2027

@@ -1,6 +1,5 @@
 ---
 import BrandMark from './BrandMark.astro';
-import MobileMenu from '../react/MobileMenu.tsx';
 const nav = [
   { href: '/property-for-sale/', label: 'Property for sale' },
   { href: '/rent/', label: 'Rent' },
@@ -12,36 +11,26 @@ const nav = [
 const currentPath = Astro.url.pathname;
 ---
 <header class="relative z-40 border-b border-stone-200 bg-stone-50/95 backdrop-blur-sm">
-  <div class="mx-auto flex max-w-[1280px] items-center justify-between gap-6 px-5 py-4 sm:px-8 lg:px-12">
+  <div class="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-5 py-4 sm:px-8 lg:gap-6 lg:px-12">
     <BrandMark />
     <nav aria-label="Main navigation" class="hidden items-center gap-7 lg:flex">
       {nav.map((item) => <a href={item.href} aria-current={currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) ? 'page' : undefined} class="text-sm font-semibold text-ink-800 transition-colors hover:text-sea-700">{item.label}</a>)}
     </nav>
     <div class="hidden items-center gap-3 lg:flex">
-      <a href="/contact/" class="text-sm font-semibold text-ink-800 transition-colors hover:text-sea-700">Contact</a>
-      <a href="/contact/" class="inline-flex min-h-11 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Join waitlist</a>
+      <a href="/contact/" class="text-sm font-semibold text-ink-800 transition-colors hover:text-sea-700">Contact status</a>
+      <a href="/property-for-sale/" class="inline-flex min-h-11 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Listing status</a>
     </div>
-    <button
-      id="mobile-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      class="lg:hidden flex min-h-11 cursor-pointer items-center gap-2 rounded-full border border-stone-300 px-4 text-sm font-bold text-ink-900 focus-visible:outline-offset-2"
-    >
-      <span aria-hidden="true" class="text-sea-700">☰</span>
-      <span class="sr-only">Menu</span>
-    </button>
-    <script is:inline>
-      const toggle = document.getElementById('mobile-menu-toggle');
-
-      function openMenu() {
-        window.dispatchEvent(new CustomEvent('mobile-menu-open'));
-      }
-
-      toggle?.addEventListener('click', openMenu);
-    </script>
+    <details class="relative lg:hidden">
+      <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-full border border-stone-300 px-4 text-sm font-bold text-ink-900 focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden">
+        <span aria-hidden="true" class="text-sea-700">☰</span><span>Menu</span>
+      </summary>
+      <nav aria-label="Mobile navigation" class="absolute right-0 top-full mt-2 w-[min(24rem,calc(100vw-2.5rem))] rounded-2xl border border-stone-200 bg-white p-3 shadow-xl">
+        <ul class="space-y-1">
+          {nav.map((item) => <li><a href={item.href} aria-current={currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href)) ? 'page' : undefined} class="block min-h-11 rounded-xl px-3 py-3 text-sm font-semibold text-ink-900 hover:bg-sea-100">{item.label}</a></li>)}
+          <li><a href="/contact/" class="block min-h-11 rounded-xl px-3 py-3 text-sm font-semibold text-ink-900 hover:bg-sea-100">Contact status</a></li>
+          <li class="border-t border-stone-100 pt-2"><a href="/property-for-sale/" class="block min-h-11 rounded-xl bg-ink-900 px-3 py-3 text-center text-sm font-bold text-white hover:bg-sea-700">Listing status</a></li>
+        </ul>
+      </nav>
+    </details>
   </div>
-
-  <MobileMenu client:load nav={nav} currentPath={currentPath} />
 </header>

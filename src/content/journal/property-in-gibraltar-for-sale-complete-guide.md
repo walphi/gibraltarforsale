@@ -4,7 +4,13 @@ description: "Step-by-step guide to buying property in Gibraltar. Covers eligibi
 updated: "2027-01-08"
 category: "buyer-advice"
 featured: true
-image: "/images/unsplash/gibraltar-city.webp"
+image: "/images/editorial/gibraltar-city-by-beach.webp"
+imageAlt: "Gibraltar city and harbour beside the coast"
+imageNote: "Location photograph; broad city context, not a specific home or listing."
+imageCredit: "Michal Mrozek / Unsplash"
+imageCreditUrl: "https://unsplash.com/photos/city-by-the-beach-at-daytime-zpt4AAra2Rw"
+imageLicenseLabel: "Unsplash License"
+imageLicenseUrl: "https://unsplash.com/license"
 tags: ["buying-process", "first-time-buyers", "eligibility", "mortgages", "costs"]
 ---
 # Property in Gibraltar for Sale: Complete Buyer's Guide 2027

@@ -2,18 +2,9 @@
 interface Crumb { label: string; href?: string }
 interface Props { items: Crumb[] }
 const { items } = Astro.props;
-const candidateOrigin = import.meta.env.PUBLIC_SITE_URL?.trim().replace(/\/$/, '');
-let origin: string | undefined;
-try {
-  if (candidateOrigin) {
-    const parsed = new URL(candidateOrigin);
-    if (parsed.protocol === 'https:' && !parsed.username && !parsed.password && parsed.pathname === '/' && !parsed.search && !parsed.hash) origin = parsed.origin;
-  }
-} catch {
-  origin = undefined;
-}
+const origin = 'https://gibraltarforsale.netlify.app';
 const trail = [{ label: 'Home', href: '/' }, ...items];
-const breadcrumbSchema = origin ? {
+const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: trail.map((item, index) => ({
@@ -22,11 +13,11 @@ const breadcrumbSchema = origin ? {
     name: item.label,
     item: new URL(item.href ?? Astro.url.pathname, origin).href,
   })),
-} : undefined;
-const breadcrumbJson = breadcrumbSchema ? JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c') : undefined;
+};
+const breadcrumbJson = JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c');
 ---
 <nav aria-label="Breadcrumb" class="mx-auto max-w-[1280px] px-5 pt-5 sm:px-8 lg:px-12">
-  <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold text-stone-600">
+  <ol class="flex flex-wrap items-center gap-2 text-sm font-semibold text-stone-600">
     <li><a href="/" class="hover:text-sea-700">Home</a></li>
     {items.map((item, index) => <li class="flex items-center gap-2">
       <span aria-hidden="true" class="text-stone-300">/</span>
@@ -34,4 +25,4 @@ const breadcrumbJson = breadcrumbSchema ? JSON.stringify(breadcrumbSchema).repla
     </li>)}
   </ol>
 </nav>
-{breadcrumbJson && <script type="application/ld+json" set:html={breadcrumbJson}></script>}
+<script type="application/ld+json" set:html={breadcrumbJson}></script>

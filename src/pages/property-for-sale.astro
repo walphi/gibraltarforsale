@@ -1,66 +1,24 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Breadcrumb from '../components/astro/Breadcrumb.astro';
-import CtaBanner from '../components/astro/CtaBanner.astro';
 ---
-<SiteLayout title="Gibraltar Property for Sale" description="Browse Gibraltar homes for sale. Register for early access to verified listings and be the first to know when new properties go live.">
+<SiteLayout title="Gibraltar Property Listings | Status" description="Gibraltar property search is not live yet. Read practical buyer guidance and area overviews while verified listings are prepared." image="/images/editorial/gibraltar-city-bay.webp">
   <Breadcrumb items={[{ label: 'Property for sale' }]} />
   <section class="mx-auto max-w-[1100px] px-5 pb-16 pt-10 sm:px-8 lg:px-12 lg:pb-24 lg:pt-16">
-    <p class="text-[10px] font-extrabold uppercase tracking-[.18em] text-sea-700">Property for sale</p>
+    <p class="text-xs font-extrabold uppercase tracking-[.18em] text-sea-700">Property for sale</p>
     <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-tight text-ink-900 sm:text-6xl">Gibraltar homes for sale</h1>
-    <div class="mt-8 rounded-2xl border border-sea-700/30 bg-sea-50 p-6 sm:p-8">
-      <p class="text-[10px] font-extrabold uppercase tracking-[.16em] text-sea-700">Verified listings coming soon</p>
-      <h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">Be the first to see new properties</h2>
-      <p class="mt-4 max-w-3xl text-sm leading-7 text-stone-600">We're building a curated database of verified Gibraltar properties. Join the waitlist for priority access when listings go live — no spam, just relevant opportunities matched to your criteria.</p>
-      <form class="mt-6 max-w-md" action="/contact/" method="POST">
-        <div class="space-y-4">
-          <div>
-            <label for="email" class="block text-sm font-semibold text-ink-900 mb-1">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20" />
-          </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <label for="buyRent" class="block text-sm font-semibold text-ink-900 mb-1">Looking to</label>
-              <select id="buyRent" name="buyRent" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20">
-                <option value="buy">Buy</option>
-                <option value="rent">Rent</option>
-              </select>
-            </div>
-            <div>
-              <label for="budget" class="block text-sm font-semibold text-ink-900 mb-1">Max budget (GBP)</label>
-              <select id="budget" name="budget" class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20">
-                <option value="">Any</option>
-                <option value="500000">£500,000</option>
-                <option value="750000">£750,000</option>
-                <option value="1000000">£1,000,000</option>
-                <option value="1500000">£1,500,000</option>
-                <option value="2000000">£2,000,000+</option>
-              </select>
-            </div>
-          </div>
-          <div>
-            <label for="areas" class="block text-sm font-semibold text-ink-900 mb-1">Areas of interest</label>
-            <select id="areas" name="areas" multiple class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-sea-700 focus:outline-none focus:ring-2 focus:ring-sea-700/20" size="4">
-              <option value="south-district">South District</option>
-              <option value="ocean-village">Ocean Village</option>
-              <option value="queensway-quay">Queensway Quay</option>
-              <option value="upper-town">Upper Town</option>
-              <option value="town-area">Town Area</option>
-              <option value="westside">Westside</option>
-              <option value="eastside">Eastside</option>
-              <option value="europa-point">Europa Point</option>
-            </select>
-            <p class="mt-1 text-xs text-stone-500">Hold Ctrl/Cmd to select multiple</p>
-          </div>
-          <button type="submit" class="w-full inline-flex min-h-12 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white transition-colors hover:bg-sea-700">Join the waitlist</button>
-          <p class="text-center text-xs text-stone-500">We'll never share your email. Unsubscribe anytime.</p>
-        </div>
-      </form>
+    <div class="mt-8 rounded-2xl border border-stone-200 bg-white p-6 sm:p-9">
+      <p class="text-xs font-extrabold uppercase tracking-[.16em] text-terra-600">Listings are not live</p>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">No verified homes to show yet</h2>
+      <p class="mt-4 max-w-3xl text-base leading-7 text-stone-600">We are not accepting enquiries or collecting contact details on this page. No sample properties, agent details, asking prices or availability are presented as real listings.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a href="/areas/" class="inline-flex min-h-11 items-center justify-center rounded-full bg-ink-900 px-5 text-sm font-bold text-white hover:bg-sea-700">Compare Gibraltar areas</a>
+        <a href="/guides/buying-property-in-gibraltar/" class="inline-flex min-h-11 items-center justify-center rounded-full border border-stone-300 px-5 text-sm font-bold text-ink-900 hover:border-sea-700">Read the buying guide</a>
+      </div>
     </div>
     <div class="mt-14 grid gap-8 md:grid-cols-2">
-      <article><p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-sea-700">When listings launch</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">What we'll verify</h2><p class="mt-3 text-sm leading-7 text-stone-600">Every listing will identify the responsible source and last-updated date, separate asking price from achieved-sale evidence, describe property facts in consistent units and distinguish the home itself from amenities or views that need confirmation. Availability reconfirmed before viewing.</p></article>
-      <article><p class="text-[10px] font-extrabold uppercase tracking-[.17em] text-sea-700">Explore while you wait</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">Use the area guides first</h2><p class="mt-3 text-sm leading-7 text-stone-600">The existing area and buyer guides help explain the questions to ask. They do not estimate a specific home's value, promise availability or replace advice from a Gibraltar solicitor, lender, tax adviser or other qualified professional.</p><div class="mt-5 flex flex-wrap gap-3"><a href="/areas/" class="min-h-11 rounded-full bg-ink-900 px-5 py-3 text-xs font-bold text-white hover:bg-sea-700">Compare areas</a><a href="/guides/buying-property-in-gibraltar/" class="min-h-11 rounded-full border border-stone-300 px-5 py-3 text-xs font-bold text-ink-900 hover:border-sea-700">Read the buying guide</a></div></article>
+      <article><p class="text-xs font-extrabold uppercase tracking-[.17em] text-sea-700">When listings launch</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">What should be verified?</h2><p class="mt-3 text-sm leading-7 text-stone-600">A useful listing should identify its source and update date, separate asking price from achieved-sale evidence, describe measured facts consistently and distinguish confirmed features from details that need checking. Availability should be reconfirmed with the responsible agent.</p></article>
+      <article><p class="text-xs font-extrabold uppercase tracking-[.17em] text-sea-700">Market context</p><h2 class="mt-3 font-display text-3xl font-semibold text-ink-900">No unsupported estimates</h2><p class="mt-3 text-sm leading-7 text-stone-600">The tracker explains its proposed measurement approach. It currently has no verified active-listing feed or private-sale dataset, so it does not publish current averages, yields or value estimates.</p><a href="/market/property-price-tracker/" class="mt-4 inline-flex min-h-11 items-center font-bold text-sea-700 underline underline-offset-4">Read the tracker status →</a></article>
     </div>
   </section>
-  <section class="mx-auto max-w-[1100px] px-5 pb-20 sm:px-8 lg:px-12"><CtaBanner light eyebrow="Market context" title="Track the market with verified data." description="See the tracker's current data status and the rules for any future measurements." href="/market/property-price-tracker/" label="Read the tracker status" /></section>
 </SiteLayout>

@@ -14,8 +14,9 @@
   --color-stone-100: #f4f1ea;
   --color-stone-200: #e8e2d7;
   --color-stone-300: #d7ccbc;
-  --color-stone-600: #80796f;
-  --color-terra-600: #a6604d;
+  --color-stone-600: #6d665d;
+  --color-terra-100: #f3e7e0;
+  --color-terra-600: #824a39;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Manrope Variable", "Manrope", system-ui, sans-serif;
 }
@@ -28,13 +29,12 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  font-size: 12px;
 }
 
 html {
   scroll-behavior: smooth;
   background: #faf9f6;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 body {
@@ -79,7 +79,7 @@ textarea {
 .article-content > :first-child { margin-top: 0; }
 .article-content h1 { margin: 2.5rem 0 1.25rem; color: #17283b; font-size: clamp(2.25rem, 4.5vw, 3.75rem); line-height: 1.04; }
 .article-content h2 { scroll-margin-top: 1.5rem; margin: 2.5rem 0 0.8rem; color: #17283b; font-size: clamp(1.6rem, 2.8vw, 2.1rem); line-height: 1.12; }
-.article-content h3 { scroll-margin-top: 1.5rem; margin: 1.8rem 0 0.6rem; color: #17283b; font-size: 1.3rem; line-height: 1.2; }
+.article-content h3 { scroll-margin-top: 1.8rem; margin: 1.8rem 0 0.6rem; color: #17283b; font-size: 1.3rem; line-height: 1.2; }
 .article-content p { margin: 1rem 0; }
 .article-content a { color: #1f748a; font-weight: 700; text-decoration: underline; text-decoration-color: rgb(31 116 138 / 35%); text-underline-offset: 0.18em; }
 .article-content a:hover { text-decoration-color: currentColor; }

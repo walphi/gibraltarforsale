@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gibraltarforsale.com/sitemap.xml
+Sitemap: https://gibraltarforsale.netlify.app/sitemap-index.xml

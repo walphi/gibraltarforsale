@@ -1,14 +1,14 @@
 ---
 const indicators = [
-  { value: '08', label: 'locally researched area guides' },
+  { value: '08', label: 'researched area guides' },
   { value: '08', label: 'practical buyer guides' },
-  { value: '12', label: 'journal articles published' },
-  { value: 'Join', label: 'early access waitlist' },
+  { value: '13', label: 'journal articles' },
+  { value: 'None yet', label: 'verified property listings live' },
 ];
 ---
 <div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-stone-200 bg-stone-200 md:grid-cols-4">
-  {indicators.map((item) => <div class="bg-white px-4 py-5 sm:px-6">
-    <p class="font-display text-2xl font-semibold text-ink-900">{item.value}</p>
-    <p class="mt-1 text-xs leading-5 text-stone-600">{item.label}</p>
+  {indicators.map((item) => <div class="min-h-24 bg-white px-4 py-5 sm:px-6">
+    <p class="font-display text-xl font-semibold leading-tight text-ink-900 sm:text-2xl">{item.value}</p>
+    <p class="mt-2 text-xs leading-5 text-stone-600">{item.label}</p>
   </div>)}
 </div>

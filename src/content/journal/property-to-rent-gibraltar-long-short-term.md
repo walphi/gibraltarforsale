@@ -4,7 +4,10 @@ description: "Complete guide to renting in Gibraltar. Covers long-term tenancies
 updated: "2027-08-08"
 category: "buyer-advice"
 featured: false
-image: "/images/unsplash/gibraltar-rental.webp"
+image: "/images/editorial/concept-bedroom.webp"
+imageAlt: "Illustrative bedroom concept in warm natural tones"
+imageNote: "AI-generated concept image; not a real rental property or listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["rental", "tenancy", "short-term-let", "long-term", "tenant-rights", "costs", "areas"]
 ---
 # Property to Rent in Gibraltar: Long-term vs Short-term Guide 2027

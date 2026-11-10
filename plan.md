@@ -33,7 +33,7 @@ The tracker and market update publish their evidence status and proposed methodo
 
 ## SEO, accessibility and performance
 
-Every live indexable route must render meaningful initial HTML, a unique title and meta description, one H1, sensible heading order, descriptive image alternatives, breadcrumbs on nested pages, internal links and canonical/OG/Twitter metadata based on the explicitly configured public origin. Until a verified public domain is attached, do not emit a misleading canonical that asserts the user's custom domain is live. Generate `sitemap.xml`, `robots.txt` and `public/manus-routes.json` from the real static route set. Exclude sample records and utility states from the sitemap. Keep the 404 a true 404 page.
+Every live indexable route must render meaningful initial HTML, a unique title and meta description, one H1, sensible heading order, descriptive image alternatives, breadcrumbs on nested pages, internal links and canonical/OG/Twitter metadata based on the explicitly configured public origin. Until a verified public domain is attached, do not emit a misleading canonical that asserts the user's custom domain is live. Generate the Astro sitemap index at `/sitemap-index.xml`, declare it in `robots.txt`, retain `/sitemap.xml` as a redirect alias, and keep `public/manus-routes.json` synchronized with real page routes. Exclude sample records and utility states from the sitemap. Keep the 404 a true 404 page.
 
 Use semantic landmarks, keyboard-operable navigation, visible focus and sufficient contrast; honor reduced-motion preferences. Compress the accurate Gibraltar panorama and use responsive image sizes. Lazy-load below-the-fold imagery; avoid blocking fonts and third-party scripts. The public site should remain usable with JavaScript unavailable apart from optional mobile navigation.
 
@@ -99,5 +99,24 @@ Mediterranean deep blue `#1F748A`, used with restraint for primary actions, sele
 3. Add the complete page route manifest before the first development-server start; verify it returns JSON over HTTP.
 4. Run host-managed TypeScript diagnostics and the Astro check/build; correct concrete defects in the live routes.
 5. Configure the actual static publish command and `dist` output; do not enable automatic publication.
-6. Fetch and integrate the canonical `origin/main`, push the intended first-release commit, and verify the checkpoint receipt.
+6. Fetch and integrate the current canonical `origin/master`, push the intended first-release commit, and verify the GitHub commit and Netlify deploy.
 7. Use one explicit publication for this user-requested launch. Report the generated public URL only after the publication job confirms success; clearly note that the custom domain and lead/alert systems remain deferred.
+
+
+## Follow-up visual and editorial refresh
+
+The owner requested more upmarket photography and original visual/content assets. Preserve the existing quiet Mediterranean-modernist system; do not replace the design with a generic luxury theme. Replace repeated byte-identical photos used under the area and journal image paths with distinct, subject-appropriate assets. Use accurately sourced Gibraltar location photography only for the place it genuinely depicts, and record creator, source page, license and image edits in `ASSET_CREDITS.md`.
+
+Create at least three original, high-end editorial scenes in a consistent natural-light palette of limestone, warm wood, muted olive and Mediterranean blue. These are visual concepts, not real properties: use them with a visible note that they are illustrative and not listings; never attach them to a sample address, named development, exact Gibraltar view or price. Keep licensed Unsplash imagery within its terms and avoid watermarked stock.
+
+Add one original, practical journal feature about making a considered Gibraltar property choice. Focus on useful viewing and decision questions, not invented market forecasts or professional/legal advice. Preserve existing factual articles except for image references and accurate alt/caption metadata; their date-sensitive claims still need separate source review. Optimize photos into repository-local responsive assets so Netlify builds remain self-contained.
+
+## 10 November 2026 launch-fix continuation
+
+The owner asked to continue the urgent website fixes and push them to the existing GitHub repository for its connected Netlify deployment. The review was performed against the live site and current `master` branch. Do not use the personal access token pasted into chat; recommend that it be revoked, and use only the already-authorized GitHub account session.
+
+The immediate work removes forms that previously posted to a route with no handler, removes unsupported waitlist/unsubscribe promises, updates Contact/Privacy/Cookie/Terms disclosures, aligns canonical, breadcrumb, sitemap and robots origins with the currently serving Netlify hostname, and adds `/sitemap.xml` as a redirect alias. The custom `.com` hostname was unresolved on the review date and remains an owner prerequisite; do not use it as canonical until it is verified in DNS and Netlify.
+
+Restore a readable 16px text base and stronger muted-text contrast, keep the small-screen navigation keyboard-operable through native HTML disclosure, and visibly credit location photos and label AI concepts as non-listing artwork. Preserve original high-risk 2027 market, tax and mortgage claims for a separate evidence-led review; do not say the urgent fix set has cleared their factual or legal accuracy.
+
+The remote's current branch is `master`, not `main`. Before pushing, fetch and integrate any remote updates, install from the committed lockfile, run TypeScript checks and the Astro build, and audit route/image references. Push a normal fast-forward commit to `origin/master`; verify GitHub and Netlify results. Do not force-push or change global Git configuration.

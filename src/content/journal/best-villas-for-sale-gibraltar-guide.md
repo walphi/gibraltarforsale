@@ -4,7 +4,10 @@ description: "Complete guide to buying villas in Gibraltar. Covers South Distric
 updated: "2026-12-08"
 category: "area-spotlight"
 featured: true
-image: "/images/unsplash/gibraltar-villas.webp"
+image: "/images/editorial/concept-terrace.webp"
+imageAlt: "Illustrative Mediterranean terrace concept with pale stone, greenery and soft evening light"
+imageNote: "AI-generated concept image; not a real Gibraltar property or listing."
+imageCredit: "Gibraltar For Sale concept image"
 tags: ["villas", "luxury-property", "south-district", "europa-point", "buying-guide"]
 ---
 # Best Villas for Sale in Gibraltar: Areas, Prices & Buying Guide 2027

@@ -2,11 +2,11 @@
 
 ## Current release scope — first public tranche
 - Publish the first content-focused tranche now using the project’s explicit Publish flow; automatic publishing remains off.
-- First tranche includes `/`, `/property-for-sale/` (a truthful page stating no verified properties are live), `/areas/` and its eight researched area pages, `/guides/` and the researched guides, `/market/`, `/market/property-price-tracker/`, `/market/quarterly-market-update/`, `/market/methodology/`, `/about/`, `/contact/`, `/privacy/`, `/terms/`, `/cookies/`, `/sitemap.xml`, `/robots.txt` and a real 404.
+- First tranche includes `/`, `/property-for-sale/` (a truthful page stating no verified properties are live), `/areas/` and its eight researched area pages, `/guides/` and the researched guides, `/market/`, `/market/property-price-tracker/`, `/market/quarterly-market-update/`, `/market/methodology/`, `/journal/` and its reviewed articles, `/about/`, `/contact/`, `/privacy/`, `/terms/`, `/cookies/`, the Astro sitemap index at `/sitemap-index.xml` with `/sitemap.xml` redirect alias, `/robots.txt` and a real 404.
 - Do not expose the 30 fictional sample listings, sample prices, fictional agents or fictional developments as live homes, providers or market evidence. Exclude them from homepage featured cards, property search/results, sitemap, indexing and route links.
 - The first release is a statically generated content site. It has no first-party form, account, saved-search, email, alert or application-analytics collection. Project-level analytics and badge scripts are disabled; the privacy/cookie notices must still disclose possible technical request processing and other platform/CDN analytics. The contact and privacy pages must say that contact and lead capture are not yet open; do not invite submission to a non-functioning form or fabricate an operator address.
 - Use the platform-generated public URL unless a custom domain is explicitly connected. Do not claim that `gibraltarforsale.com` is attached or operational.
-- Preserve all research citations, reference links and qualifications. Do not show sample charts or invented market values. No additional image-generation or market-data API work is needed for this tranche.
+- Preserve all research citations, reference links and qualifications. Do not show sample charts or invented market values. This follow-up specifically authorizes an image and editorial-content refresh, including original AI-generated illustrative images and carefully licensed photography.
 
 ## 1. Brand system, responsive shell and accessible navigation — [ ]
 - Brand name is Gibraltar For Sale and its positioning is “The independent guide to buying property in Gibraltar — search curated listings, understand areas, residency, costs and investment potential, then connect with vetted local agents.”
@@ -69,7 +69,14 @@
 - Generate an XML sitemap and robots.txt; include safe canonicals, redirect plan for future URL changes and 404 monitoring. Do not index filtered/duplicate states or sample listing detail pages.
 - Add integration points for Google Search Console verification; GA4 events for property enquiry submitted, property alert created, phone click, email click, WhatsApp click, agent profile click, search performed, listing viewed and guide download; Microsoft Clarity or Hotjar; and Plausible. No third-party analytics run in Phase 1 without consent and supplied identifiers.
 
-## 10. Performance, setup and launch handoff — [ ]
+## 10. Premium visual refresh and original editorial feature — [x]
+- Replace the byte-identical placeholder images currently reused under the eight area-image and twelve journal-image filenames with at least 12 distinct, relevant visual assets. Reuse an image only for closely related subject matter; do not imply any editorial photograph is a live property listing.
+- Add at least three original, upmarket Mediterranean/luxury editorial images. They must not depict or be captioned as a specific real Gibraltar property, named development, or verified view. Label conceptual property scenes as illustrative inspiration, not available listings.
+- Select Gibraltar landmark/location photographs only from their actual source pages; preserve the creator, license, source URL and any modifications in `ASSET_CREDITS.md`. Use descriptive alt text and do not use watermarked, rights-unclear or low-resolution stock images.
+- Add one original, useful, premium-voiced journal feature about making a considered property choice in Gibraltar. Keep it practical and non-duplicative, cite or link any factual local/legal claims, avoid unsupported prices/yields/market forecasts, and state that illustrative imagery is not a listing.
+- Keep all new assets optimized, responsive and mobile-friendly; preserve the editorial ivory/navy/stone/Mediterranean-blue visual system and readable type.
+
+## 11. Performance, setup and launch handoff — [ ]
 - Performance targets: Lighthouse mobile 90+, LCP under 2.5 seconds, CLS under 0.1 and INP under 200 ms. Use responsive modern images with appropriate srcset, lazy-load below-the-fold images, minimize client JavaScript, preload critical fonts, use system fallbacks, avoid render-blocking third-party scripts and optimize/compress imagery.
 - Use Astro as the primary framework; React only for interactive components; Tailwind CSS v4 via its Vite plugin, not deprecated `@astrojs/tailwind`; TypeScript throughout; Zod validation; Astro Content Collections; deployment-compatible server rendering; no client-side rendering for core SEO content. Phase 1 uses static generation; server rendering is deferred until data/forms need it.
 - README explains setup, environment variables, deployment, content editing and how to replace sample data. Include a launch checklist and recommended next-phase roadmap.
